@@ -1,6 +1,14 @@
+import Stat from './Stat.js'
+
 function Planner() {
   return (
-    <h1>Planner</h1>
+    <div>
+      <h1>Planner</h1>
+      <div>
+        <Stat statname="vigor" />
+        <Stat statname="mind" />
+      </div>
+    </div>
   )
 }
 
