@@ -1,8 +1,9 @@
 import PlayerStat from './PlayerStat.js'
+import GameplayStat from './GameplayStat.js'
 
 function Planner() {
   return (
-    <div>
+    <div className=''>
       <h1>Planner</h1>
       <div className="bg-red-500 flex flex-col">
         <PlayerStat statname="vigor" />
@@ -13,6 +14,10 @@ function Planner() {
         <PlayerStat statname="inteligence" />
         <PlayerStat statname="faith" />
         <PlayerStat statname="arcane" />
+      </div>
+      <div>
+        <GameplayStat statname="HP" statlisten="vigor" />
+        <GameplayStat statname="FP" statlisten="mind" />
       </div>
     </div>
   )

@@ -1,5 +1,11 @@
 function PlayerStat(props) {
 
+  const statUpdateEvent = new CustomEvent('statChange', {
+    bubbles: true,
+    cancelable: true,
+    detail: { statname: props.statname }
+  });
+
   const raise = (a) => {
     var el = document.getElementById(a);
     var x = Number(el.value);
@@ -10,6 +16,7 @@ function PlayerStat(props) {
     } else {
       el.value = x + 1;
     }
+    el.dispatchEvent(statUpdateEvent);
   }
 
   const lower = (a) => {
@@ -22,6 +29,7 @@ function PlayerStat(props) {
     } else {
       el.value = x - 1;
     }
+    el.dispatchEvent(statUpdateEvent);
   }
 
   return (
