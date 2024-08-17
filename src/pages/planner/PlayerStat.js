@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function PlayerStat(props) {
+
+  const [inputValue, setInputValue] = useState(10);
 
   const statUpdateEvent = new CustomEvent('statChange', {
     bubbles: true,
@@ -6,38 +10,64 @@ function PlayerStat(props) {
     detail: { statname: props.statname }
   });
 
-  const raise = (a) => {
-    var el = document.getElementById(a);
-    var x = Number(el.value);
-    if (x < 0) {
-      el.value = 0;
-    } else if (x > 99) {
-      el.value = 99;
-    } else {
-      el.value = x + 1;
+  const validateNumber = (min, max, number) => {
+    if (number.isNaN) {
+      number = min;
     }
-    el.dispatchEvent(statUpdateEvent);
+    number = Math.max(number, min);
+    number = Math.min(number, max);
+    return number;
   }
 
-  const lower = (a) => {
-    var el = document.getElementById(a);
-    var x = Number(el.value);
-    if (x <= 0) {
-      el.value = 0;
-    } else if (x > 99) {
-      el.value = 99;
-    } else {
-      el.value = x - 1;
+  const raise = () => {
+    setInputValue(validateNumber(1, 99, Number(inputValue) + 1));
+    statUpdateEvent.detail.statvalue = inputValue;
+    window.dispatchEvent(statUpdateEvent);
+  }
+
+  const lower = () => {
+    setInputValue(validateNumber(1, 99, Number(inputValue) - 1));
+    statUpdateEvent.detail.statvalue = inputValue;
+    window.dispatchEvent(statUpdateEvent);
+  }
+
+  const valueChanged = (event) => {
+    setInputValue(Number(event.target.value));
+    statUpdateEvent.detail.statvalue = inputValue;
+    window.dispatchEvent(statUpdateEvent);
+    console.log('value changend')
+  }
+
+  const handleBlur = () => {
+    setInputValue(validateNumber(1, 99, Number(inputValue)));
+    statUpdateEvent.detail.statvalue = inputValue;
+    window.dispatchEvent(statUpdateEvent);
+    console.log('blurtriggered')
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('correcting value')
+      setInputValue(validateNumber(1, 99, Number(inputValue)));
+      statUpdateEvent.detail.statvalue = inputValue;
+      window.dispatchEvent(statUpdateEvent);
     }
-    el.dispatchEvent(statUpdateEvent);
+    console.log('keyDownTriggered')
   }
 
   return (
     <div className="flex flex-row">
       <label for={props.statname} className="w-1/6">{props.statname}</label>
-      <input type="text" id={props.statname} readOnly value="10" className="w-4" />
+      <input type="text"
+        id={props.statname}
+        className="w-8"
+        value={inputValue}
+        onChange={valueChanged}
+        onKeyDown={handleKeyDown}
+        onBlur={handleBlur}
+      />
       <button className="w-4 p-0 m-0" onClick={() => lower(props.statname)}>-</button>
-      <button className="w-4 p-0 m-0" onClick={() => raise(props.statname)}>+</button>
+      <button className="w-4 p-0 m-0" onClick={() => raise()}>+</button>
     </div>
   )
 }

@@ -6,14 +6,14 @@ function Planner() {
     <div className=''>
       <h1>Planner</h1>
       <div className="bg-red-500 flex flex-col">
-        <PlayerStat statname="vigor" />
-        <PlayerStat statname="mind" />
-        <PlayerStat statname="endurance" />
-        <PlayerStat statname="strength" />
-        <PlayerStat statname="dexterity" />
-        <PlayerStat statname="inteligence" />
-        <PlayerStat statname="faith" />
-        <PlayerStat statname="arcane" />
+        <PlayerStat statname="vigor" defaultvalue="10" />
+        <PlayerStat statname="mind" defaultvalue="10" />
+        <PlayerStat statname="endurance" defaultvalue="10" />
+        <PlayerStat statname="strength" defaultvalue="10" />
+        <PlayerStat statname="dexterity" defaultvalue="10" />
+        <PlayerStat statname="inteligence" defaultvalue="10" />
+        <PlayerStat statname="faith" defaultvalue="10" />
+        <PlayerStat statname="arcane" defaultvalue="10" />
       </div>
       <div>
         <GameplayStat statname="HP" statlisten="vigor" />
