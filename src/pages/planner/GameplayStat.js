@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
+import { updateHP, updateFP, updateEND } from "./updateStats";
 
 function GameplayStat(props) {
 
   const [inputValue, setInputValue] = useState('');
 
   useEffect(() => {
-    const handleCustomEvent = (event) => {
-      if (props.statlisten === event.detail.statname) {
-        var statval = event.detail.statvalue;
-        if (statval > 20) {
-          setInputValue(20);
-        } else if (statval > 10) {
-          setInputValue(10);
-        } else {
-          setInputValue(0);
+    const handleStatChangeEvent = (event) => {
+      const statname = event.detail.statname;
+      if (props.statlisten === statname) {
+        var statval = Number(event.detail.statvalue);
+        console.log(statval)
+        switch (statname) {
+          case "vigor": setInputValue(updateHP(statval)); break;
+          case "mind": setInputValue(updateFP(statval)); break;
+          case "endurance": setInputValue(updateEND(statval)); break;
+          default: console.log('switchcase');
         }
         console.log('detected matching event ' + event.detail.statname)
       }
     }
-    window.addEventListener('statChange', handleCustomEvent);
+    window.addEventListener('statChange', handleStatChangeEvent);
   }, [props])
 
   return (

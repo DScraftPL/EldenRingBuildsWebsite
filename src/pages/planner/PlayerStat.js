@@ -21,13 +21,13 @@ function PlayerStat(props) {
 
   const raise = () => {
     setInputValue(validateNumber(1, 99, Number(inputValue) + 1));
-    statUpdateEvent.detail.statvalue = inputValue;
+    statUpdateEvent.detail.statvalue = inputValue + 1;
     window.dispatchEvent(statUpdateEvent);
   }
 
   const lower = () => {
     setInputValue(validateNumber(1, 99, Number(inputValue) - 1));
-    statUpdateEvent.detail.statvalue = inputValue;
+    statUpdateEvent.detail.statvalue = inputValue - 1;
     window.dispatchEvent(statUpdateEvent);
   }
 
