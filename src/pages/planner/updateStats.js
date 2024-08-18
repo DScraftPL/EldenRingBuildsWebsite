@@ -38,9 +38,25 @@ function updateFP(lvl) {
   }
 }
 
-function updateEND(lvl) {
-  return 1;
+function updateStamina(lvl) {
+  if (lvl >= 61) {
+    return Math.floor(
+      155 + 15 * (((((lvl - 50) / 49))))
+    );
+  } else if (lvl >= 36) {
+    return Math.floor(
+      130 + 25 * (Math.pow((((lvl - 30) / 20))))
+    )
+  } else if (lvl >= 16) {
+    return Math.floor(
+      105 + 25 * (((((lvl - 15) / 15))))
+    )
+  } else {
+    return Math.floor(
+      80 + 25 * (((((lvl - 1) / 14))))
+    )
+  }
 }
 
-export { updateHP, updateFP, updateEND }
+export { updateHP, updateFP, updateStamina }
 

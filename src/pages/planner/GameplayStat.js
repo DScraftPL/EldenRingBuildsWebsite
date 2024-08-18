@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { updateHP, updateFP, updateEND } from "./updateStats";
+import { updateHP, updateFP, updateStamina } from "./updateStats";
 
 function GameplayStat(props) {
 
@@ -14,8 +14,8 @@ function GameplayStat(props) {
         switch (statname) {
           case "vigor": setInputValue(updateHP(statval)); break;
           case "mind": setInputValue(updateFP(statval)); break;
-          case "endurance": setInputValue(updateEND(statval)); break;
-          default: console.log('switchcase');
+          case "endurance": setInputValue(updateStamina(statval)); break;
+          default: console.log('switchcase!');
         }
         console.log('detected matching event ' + event.detail.statname)
       }
