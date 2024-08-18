@@ -1,48 +1,50 @@
 import { useState } from 'react'
 
-import PlayerStat from './PlayerStat.js'
-import GameplayStat from './GameplayStat.js'
+import PlayerStats from './PlayerStats.js'
+import GameplayStats from './GameplayStats.js'
+import classes from './classes.json'
 
 function Planner() {
 
-  const startingClass = {
-    wretch: {
-      vigor: 10,
-      mind: 10,
-      endurance: 10,
-      strength: 10,
-      dexterity: 10,
-      inteligence: 10,
-      faith: 10,
-      arcane: 10
+  const [playerStats, setPlayerStats] = useState(classes.wretch);
+  const [chosenClass, setChosenClass] = useState('wretch');
+
+
+  const updatePlayerStats = (stat, newValue) => {
+    if (newValue > 99) {
+      setPlayerStats(prevStats => ({
+        ...prevStats,
+        [stat]: 99
+      }))
+    } else if (newValue >= classes[chosenClass][stat]) {
+      setPlayerStats(prevStats => ({
+        ...prevStats,
+        [stat]: newValue
+      }));
+    } else {
+      setPlayerStats(prevStats => ({
+        ...prevStats,
+        [stat]: classes[chosenClass][stat]
+      }))
     }
   }
 
-  const [initStats, setInitStats] = useState(startingClass.wretch)
+  const updateChosenClass = (e) => {
+    console.log(e.target.value);
+    setChosenClass(e.target.value);
+    setPlayerStats(classes[e.target.value]);
+  }
 
   return (
-    <div className=''>
+    <div>
       <h1>Planner</h1>
-      <div className="bg-red-500 flex flex-col">
-        <PlayerStat statname="vigor" defaultvalue={initStats.vigor} />
-        <PlayerStat statname="mind" defaultvalue={initStats.mind} />
-        <PlayerStat statname="endurance" defaultvalue={initStats.endurance} />
-        <PlayerStat statname="strength" defaultvalue={initStats.strength} />
-        <PlayerStat statname="dexterity" defaultvalue={initStats.dexterity} />
-        <PlayerStat statname="inteligence" defaultvalue={initStats.inteligence} />
-        <PlayerStat statname="faith" defaultvalue={initStats.faith} />
-        <PlayerStat statname="arcane" defaultvalue={initStats.arcane} />
-      </div>
-      <div>
-        <GameplayStat statname="HP" statlisten="vigor" />
-        <GameplayStat statname="FP" statlisten="mind" />
-        <GameplayStat statname="Stamina" statlisten="endurance" />
-      </div>
-      <div>
-        <select name="startingClass" id="startingClass" >
-          <option value="wretch" default> wretch </option>
-        </select>
-      </div>
+      <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} />
+      <label htmlFor='selectClass'> Choose class: </label>
+      <select id="selectClass" value={chosenClass} onChange={updateChosenClass}>
+        <option value="wretch">wretch</option>
+        <option value="confessor">confessor</option>
+      </select>
+      <GameplayStats playerStats={playerStats} />
     </div>
   )
 }

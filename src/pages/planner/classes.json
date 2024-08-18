@@ -1,0 +1,22 @@
+{
+  "wretch": {
+    "vigor": 10,
+    "mind": 10,
+    "endurance": 10,
+    "strength": 10,
+    "dexterity": 10,
+    "inteligence": 10,
+    "faith": 10,
+    "arcane": 10
+  },
+  "confessor": {
+    "vigor": 10,
+    "mind": 13,
+    "endurance": 10,
+    "strength": 12,
+    "dexterity": 12,
+    "inteligence": 9,
+    "faith": 14,
+    "arcane": 9
+  }
+}

@@ -11,7 +11,7 @@ import {
 
 function App() {
   return (
-    <div className='bg-amber-500'>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<NavigationBar />}>
