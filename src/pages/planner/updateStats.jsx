@@ -1,21 +1,32 @@
-function updateHP(lvl) {
+import allTalismans from './talismans.json'
+
+function applyTalismansEffectValue(statVal, chosenEquipment, stat) {
+  const chosenTalismans = Object.values(chosenEquipment.talismans);
+  /*chosenTalismans.forEach(talisman => {
+    console.log(talisman);
+    console.log(allTalismans[talisman]);
+  })*/
+  chosenTalismans.forEach(talisman => {
+    if (allTalismans[talisman].statType === stat && talisman !== "None") {
+      statVal *= parseFloat(allTalismans[talisman].statValue);
+    }
+  });
+  return statVal;
+}
+
+function updateHP(lvl, chosenEquipment) {
+  let stat = 0
   if (lvl >= 61) {
-    return Math.floor(
-      1900 + 200 * (1 - Math.pow((1 - ((lvl - 60) / 39)), 1.2))
-    );
+    stat = 1900 + 200 * (1 - Math.pow((1 - ((lvl - 60) / 39)), 1.2));
   } else if (lvl >= 41) {
-    return Math.floor(
-      1450 + 450 * (1 - Math.pow((1 - ((lvl - 40) / 20)), 1.2))
-    )
+    stat = 1450 + 450 * (1 - Math.pow((1 - ((lvl - 40) / 20)), 1.2));
   } else if (lvl >= 26) {
-    return Math.floor(
-      800 + 650 * (Math.pow((((lvl - 25) / 15)), 1.1))
-    )
+    stat = 800 + 650 * (Math.pow((((lvl - 25) / 15)), 1.1))
   } else {
-    return Math.floor(
-      300 + 500 * (Math.pow((((lvl - 1) / 24)), 1.5))
-    )
+    stat = 300 + 500 * (Math.pow((((lvl - 1) / 24)), 1.5))
   }
+
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "HP"));
 }
 
 function updateFP(lvl) {
