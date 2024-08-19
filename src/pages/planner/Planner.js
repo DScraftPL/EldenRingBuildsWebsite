@@ -58,10 +58,9 @@ function Planner() {
   const updateChosenTalisman = (e, slot) => {
     const getBaseName = (name) => {
       return name.split(' +')[0];
-
     }
-    const selectedTalismans = Object.values(chosenEquipment.talismans)
-    selectedTalismans.map(getBaseName);
+    //selectedTalismans.map(getBaseName) -- i was looking for this for 10 mins, learn from my mistakes
+    const selectedTalismans = Object.values(chosenEquipment.talismans).map(getBaseName);
 
     if (getBaseName(chosenEquipment.talismans[slot]) !== getBaseName(e.target.value)) {
       if (selectedTalismans.includes(getBaseName(e.target.value)) && e.target.value !== 'None') {

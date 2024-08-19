@@ -3,1012 +3,1249 @@
     "description": "unequipped",
     "weight": 0.0,
     "statType": "",
-    "statValue": ""
+    "statValue": "",
+    "multiple": false
   },
   "Crimson Amber Medallion": {
     "description": "Boosts maximum HP by 6%",
     "weight": 0.3,
     "statType": "HP",
-    "statValue": "1.06"
+    "statValue": 1.06,
+    "multiple": false
   },
   "Crimson Amber Medallion +1": {
     "description": "Boosts maximum HP by 7%",
     "weight": 0.3,
     "statType": "HP",
-    "statValue": "1.07"
+    "statValue": 1.07,
+    "multiple": false
   },
   "Crimson Amber Medallion +2": {
     "description": "Boosts maximum HP by 8%",
     "weight": 0.3,
     "statType": "HP",
-    "statValue": "1.08"
+    "statValue": 1.08,
+    "multiple": false
   },
   "Crimson Amber Medallion +3": {
     "description": "Boosts maximum HP by 10%",
     "weight": 0.6,
     "statType": "HP",
-    "statValue": "1.10"
+    "statValue": 1.10,
+    "multiple": false
   },
   "Cerulean Amber Medallion": {
     "description": "Boosts maximum FP by 7%",
     "weight": 0.3,
     "statType": "FP",
-    "statValue": "1.07"
+    "statValue": 1.07,
+    "multiple": false
   },
   "Cerulean Amber Medallion +1": {
     "description": "Boosts maximum FP by 9%",
     "weight": 0.3,
     "statType": "FP",
-    "statValue": "1.09"
+    "statValue": 1.09,
+    "multiple": false
   },
   "Cerulean Amber Medallion +2": {
     "description": "Boosts maximum FP by 11%",
     "weight": 0.3,
     "statType": "FP",
-    "statValue": "1.11"
+    "statValue": 1.11,
+    "multiple": false
   },
   "Cerulean Amber Medallion +3": {
     "description": "Boosts maximum FP by 12.5%",
     "weight": 0.6,
     "statType": "FP",
-    "statValue": "1.125"
+    "statValue": 1.125,
+    "multiple": false
   },
   "Viridian Amber Medallion": {
     "description": "Boosts maximum stamina by 11%",
     "weight": 0.6,
     "statType": "Stamina",
-    "statValue": "1.11"
+    "statValue": 1.11,
+    "multiple": false
   },
   "Viridian Amber Medallion +1": {
     "description": "Boosts maximum stamina by 13%",
     "weight": 0.6,
     "statType": "Stamina",
-    "statValue": "1.13"
+    "statValue": 1.13,
+    "multiple": false
   },
   "Viridian Amber Medallion +2": {
     "description": "Boosts maximum stamina by 15%",
     "weight": 0.6,
     "statType": "Stamina",
-    "statValue": "1.15"
+    "statValue": 1.15,
+    "multiple": false
   },
   "Viridian Amber Medallion +3": {
     "description": "Boosts maximum stamina by 17%",
     "weight": 0.6,
     "statType": "Stamina",
-    "statValue": "1.17"
+    "statValue": 1.17,
+    "multiple": false
   },
   "Two-Headed Turtle Talisman": {
     "description": "Raises Stamina recovery speed by 22.2%",
     "weight": 1.0,
-    "statType": "Stamina Recovery Speed",
-    "statValue": "1.222"
+    "statType": "StaminaRec",
+    "statValue": 1.222,
+    "multiple": false
   },
   "Stalwart Horn Charm": {
     "description": "Raises Robustness by 90",
     "weight": 0.6,
     "statType": "Robustness",
-    "statValue": "90"
+    "statValue": 90,
+    "multiple": false
   },
   "Stalwart Horn Charm +1": {
     "description": "Raises Robustness by 140",
     "weight": 0.6,
     "statType": "Robustness",
-    "statValue": "140"
+    "statValue": 140,
+    "multiple": false
   },
   "Stalwart Horn Charm +2": {
     "description": "Raises Robustness by 180",
     "weight": 0.9,
     "statType": "Robustness",
-    "statValue": "180"
+    "statValue": 180,
+    "multiple": false
   },
   "Immunizing Horn Charm": {
     "description": "Raises Immunity by 90",
     "weight": 0.6,
     "statType": "Immunity",
-    "statValue": "90"
+    "statValue": 90,
+    "multiple": false
   },
   "Immunizing Horn Charm +1": {
     "description": "Raises Immunity by 140",
     "weight": 0.6,
     "statType": "Immunity",
-    "statValue": "140"
+    "statValue": 140,
+    "multiple": false
   },
   "Immunizing Horn Charm +2": {
     "description": "Raises Immunity by 180",
     "weight": 0.9,
     "statType": "Immunity",
-    "statValue": "180"
+    "statValue": 180,
+    "multiple": false
   },
   "Clarifying Horn Charm": {
     "description": "Raises Focus by 140",
     "weight": 0.6,
     "statType": "Focus",
-    "statValue": "140"
+    "statValue": 140,
+    "multiple": false
   },
   "Clarifying Horn Charm +1": {
     "description": "Raises Focus by 190",
     "weight": 0.6,
     "statType": "Focus",
-    "statValue": "190"
+    "statValue": 190,
+    "multiple": false
   },
   "Clarifying Horn Charm +2": {
     "description": "Raises Focus by 230",
     "weight": 0.9,
     "statType": "Focus",
-    "statValue": "230"
+    "statValue": 230,
+    "multiple": false
   },
   "Mottled Necklace": {
     "description": "Raises Immunity, Robustness, and Focus by 40",
     "weight": 0.9,
-    "statType": "Immunity, Robustness, Focus",
-    "statValue": "40"
+    "statType": [
+      "Immunity",
+      "Robustness",
+      "Focus"
+    ],
+    "statValue": [
+      40,
+      40,
+      40
+    ],
+    "multiple": true
   },
   "Mottled Necklace +1": {
     "description": "Raises Immunity, Robustness, and Focus by 60",
     "weight": 0.9,
-    "statType": "Immunity, Robustness, Focus",
-    "statValue": "60"
+    "statType": [
+      "Immunity",
+      "Robustness",
+      "Focus"
+    ],
+    "multiple": true,
+    "statValue": [
+      60,
+      60,
+      60
+    ]
   },
   "Mottled Necklace +2": {
     "description": "Raises Immunity, Robustness, and Focus by 100",
     "weight": 1.2,
-    "statType": "Immunity, Robustness, Focus",
-    "statValue": "100"
+    "statValue": [
+      100,
+      100,
+      100
+    ],
+    "statType": [
+      "Immunity",
+      "Robustness",
+      "Focus"
+    ],
+    "multiple": true
   },
   "Spelldrake Talisman": {
-    "description": "Reduces Magic Damage taken by 13%. (Effect reduced to 4% in PvP)",
+    "description": "Reduces Magic Damage taken by 13%.",
     "weight": 0.6,
-    "statType": "Magic Damage Reduction",
-    "statValue": "0.87"
+    "statType": "MagicRed",
+    "statValue": 0.87,
+    "multiple": false
   },
   "Spelldrake Talisman +1": {
-    "description": "Reduces Magic Damage taken by 17%. (Effect reduced to 5% in PvP)",
+    "description": "Reduces Magic Damage taken by 17%.",
     "weight": 0.6,
-    "statType": "Magic Damage Reduction",
-    "statValue": "0.83"
+    "statType": "MagicRed",
+    "statValue": 0.83,
+    "multiple": false
   },
   "Spelldrake Talisman +2": {
-    "description": "Reduces Magic Damage taken by 20%. (Effect reduced to 6% in PvP)",
+    "description": "Reduces Magic Damage taken by 20%.",
     "weight": 0.6,
-    "statType": "Magic Damage Reduction",
-    "statValue": "0.80"
+    "statType": "MagicRed",
+    "statValue": 0.80,
+    "multiple": false
   },
   "Spelldrake Talisman +3": {
-    "description": "Reduces Magic Damage taken by 22%. (Effect reduced to 7% in PvP)",
+    "description": "Reduces Magic Damage taken by 22%.",
     "weight": 0.9,
-    "statType": "Magic Damage Reduction",
-    "statValue": "0.78"
+    "statType": "MagicRed",
+    "statValue": 0.78,
+    "multiple": false
   },
   "Flamedrake Talisman": {
-    "description": "Reduces Fire Damage taken by 13% (Effect reduced to 4% in PvP)",
+    "description": "Reduces Fire Damage taken by 13%",
     "weight": 0.6,
-    "statType": "Fire Damage Reduction",
-    "statValue": "0.87"
+    "statType": "FireRed",
+    "statValue": 0.87,
+    "multiple": false
   },
   "Flamedrake Talisman +1": {
-    "description": "Reduces Fire Damage taken by 17% (Effect reduced to 5% in PvP)",
+    "description": "Reduces Fire Damage taken by 17%",
     "weight": 0.6,
-    "statType": "Fire Damage Reduction",
-    "statValue": "0.83"
+    "statType": "FireRed",
+    "statValue": 0.83,
+    "multiple": false
   },
   "Flamedrake Talisman +2": {
-    "description": "Reduces Fire Damage taken by 20% (Effect reduced to 6% in PvP)",
+    "description": "Reduces Fire Damage taken by 20%",
     "weight": 0.6,
-    "statType": "Fire Damage Reduction",
-    "statValue": "0.80"
+    "statType": "FireRed",
+    "statValue": 0.80,
+    "multiple": false
   },
   "Flamedrake Talisman +3": {
-    "description": "Reduces Fire Damage taken by 22% (Effect reduced to 7% in PvP)",
+    "description": "Reduces Fire Damage taken by 22%",
     "weight": 0.9,
-    "statType": "Fire Damage Reduction",
-    "statValue": "0.78"
+    "statType": "FireRed",
+    "statValue": 0.78,
+    "multiple": false
   },
   "Boltdrake Talisman": {
     "description": "Boosts Lightning Damage negation by 13%",
     "weight": 0.6,
-    "statType": "Lightning Damage Negation",
-    "statValue": "0.87"
+    "statType": "LightRed",
+    "statValue": 0.87,
+    "multiple": false
   },
   "Boltdrake Talisman +1": {
     "description": "Boosts Lightning Damage negation by 17%",
     "weight": 0.6,
-    "statType": "Lightning Damage Negation",
-    "statValue": "0.83"
+    "statType": "LightRed",
+    "statValue": 0.83,
+    "multiple": false
   },
   "Boltdrake Talisman +2": {
     "description": "Boosts Lightning Damage negation by 20%",
     "weight": 0.6,
-    "statType": "Lightning Damage Negation",
-    "statValue": "0.80"
+    "statType": "LightRed",
+    "statValue": 0.80,
+    "multiple": false
   },
   "Boltdrake Talisman +3": {
     "description": "Boosts Lightning Damage negation by 22%",
     "weight": 0.9,
-    "statType": "Lightning Damage Negation",
-    "statValue": "0.78"
+    "statType": "LightRed",
+    "statValue": 0.78,
+    "multiple": false
   },
   "Golden Braid": {
     "description": "Boosts holy damage negation by 22%",
     "weight": 0.9,
-    "statType": "Holy Damage Negation",
-    "statValue": "0.78"
+    "statType": "HolyRed",
+    "statValue": 0.78,
+    "multiple": false
   },
   "Pearldrake Talisman": {
     "description": "Boosts non-physical damage negation by 5%",
     "weight": 0.9,
-    "statType": "Non-Physical Damage Negation",
-    "statValue": "0.95"
+    "statType": [
+      "MagicRed",
+      "LightRed",
+      "FireRed",
+      "HolyRed"
+    ],
+    "statValue": 0.95,
+    "multiple": true
   },
   "Pearldrake Talisman +1": {
     "description": "Boosts non-physical damage negation by 7%",
     "weight": 0.9,
-    "statType": "Non-Physical Damage Negation",
-    "statValue": "0.93"
+    "statType": [
+      "MagicRed",
+      "LightRed",
+      "FireRed",
+      "HolyRed"
+    ],
+    "statValue": 0.93,
+    "multiple": true
   },
   "Pearldrake Talisman +2": {
     "description": "Boosts non-physical damage negation by 9%",
     "weight": 0.9,
-    "statType": "Non-Physical Damage Negation",
-    "statValue": "0.91"
+    "statType": [
+      "MagicRed",
+      "LightRed",
+      "FireRed",
+      "HolyRed"
+    ],
+    "statValue": 0.91,
+    "multiple": true
   },
   "Pearldrake Talisman +3": {
     "description": "Boosts non-physical damage negation by 11%",
     "weight": 1.2,
-    "statType": "Non-Physical Damage Negation",
-    "statValue": "0.89"
+    "statType": [
+      "MagicRed",
+      "LightRed",
+      "FireRed",
+      "HolyRed"
+    ],
+    "statValue": 0.89,
+    "multiple": true
   },
   "Crimson Seed Talisman": {
     "description": "Boosts HP restoration from the Flask of Crimson Tears by 20%",
     "weight": 0.8,
-    "statType": "HP Restoration",
-    "statValue": "1.20"
+    "statType": "HPRec",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Crimson Seed Talisman +1": {
     "description": "Boosts HP restoration from the Flask of Crimson Tears by 30%",
     "weight": 1.1,
-    "statType": "HP Restoration",
-    "statValue": "1.30"
+    "statType": "HPRec",
+    "statValue": 1.30,
+    "multiple": false
   },
   "Cerulean Seed Talisman": {
     "description": "Boosts FP restoration from Flask of Cerulean Tears by 20%",
     "weight": 0.8,
-    "statType": "FP Restoration",
-    "statValue": "1.20"
+    "statType": "FPRec",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Cerulean Seed Talisman +1": {
     "description": "Boosts FP restoration from Flask of Cerulean Tears by 30%",
     "weight": 1.1,
-    "statType": "FP Restoration",
-    "statValue": "1.30"
-  },
-  "Blessed Dew Talisman": {
-    "description": "Restores 2 HP per second",
-    "weight": 0.6,
-    "statType": "HP Restoration",
-    "statValue": "2 HP/sec"
-  },
-  "Blessed Blue Dew Talisman": {
-    "description": "Slowly restores FP (0.5 FP per second)",
-    "weight": 1.2,
-    "statType": "FP Restoration",
-    "statValue": "0.5 FP/sec"
-  },
-  "Fine Crucible Feather Talisman": {
-    "description": "Improves backsteps but increases damage taken by 15%",
-    "weight": 0.6,
-    "statType": "Damage Taken Increase",
-    "statValue": "1.15"
-  },
-  "Shattered Stone Talisman": {
-    "description": "Raises potency of kicking and stomping skills by 10%",
-    "weight": 0.8,
-    "statType": "Kicking and Stomping Potency",
-    "statValue": "1.10"
-  },
-  "Two-Handed Sword Talisman": {
-    "description": "Enhances attacks with two-handed weapons by 15%",
-    "weight": 1.2,
-    "statType": "Two-Handed Weapon Attacks",
-    "statValue": "1.15"
-  },
-  "Crusade Insignia": {
-    "description": "Raises attack power by 15% for 20 seconds after defeating an enemy",
-    "weight": 1.2,
-    "statType": "Attack Power Increase",
-    "statValue": "1.15"
-  },
-  "Aged One's Exultation": {
-    "description": "Increases attack power by 20% for 20 seconds when near poison or rot",
-    "weight": 1.2,
-    "statType": "Attack Power Increase",
-    "statValue": "1.20"
-  },
-  "Flock's Canvas Talisman": {
-    "description": "Greatly raises potency of incantations by 10%",
-    "weight": 0.9,
-    "statType": "Incantations Potency",
-    "statValue": "1.10"
-  },
-  "Pearl Shield Talisman": {
-    "description": "Boosts all non-physical damage negation by 20% while guarding",
-    "weight": 0.9,
-    "statType": "Non-Physical Damage Negation While Guarding",
-    "statValue": "1.20"
-  },
-  "Dried Bouquet": {
-    "description": "Raises attack power by 15% for 20 seconds when summoned spirit dies",
-    "weight": 0.8,
-    "statType": "Attack Power Increase",
-    "statValue": "1.15"
-  },
-  "Smithing Talisman": {
-    "description": "Enhances weapon-throwing attacks by 10%",
-    "weight": 1.3,
-    "statType": "Weapon-Throwing Attacks",
-    "statValue": "1.10"
-  },
-  "Ailment Talisman": {
-    "description": "Boosts resistance stats by roughly 350 for a short time after a status effect is applied to you",
-    "weight": 0.6,
-    "statType": "Resistance Stats Increase",
-    "statValue": "350"
-  },
-  "Retaliatory Crossed-Tree": {
-    "description": "Enhances attacks executed after rolling or backstepping by 17%",
-    "weight": 0.3,
-    "statType": "Attacks After Rolling or Backstepping",
-    "statValue": "1.17"
-  },
-  "Lacerating Crossed-Tree": {
-    "description": "Enhances dash attacks by 15% in PvE and 7.5% in PvP",
-    "weight": 0.8,
-    "statType": "Dash Attacks (PvE/PvP)",
-    "statValue": "1.15 (PvE), 1.075 (PvP)"
-  },
-  "Sharpshot Talisman": {
-    "description": "Boosts attack power of precision-aimed shots by 12%",
-    "weight": 0.6,
-    "statType": "Precision-Aimed Shots",
-    "statValue": "1.12"
-  },
-  "St. Trina's Smile": {
-    "description": "Sleep in the vicinity increases attack power by 20% for 30 seconds.",
-    "weight": 0.9,
-    "statType": "Attack Power Increase",
-    "statValue": "1.20"
-  },
-  "Talisman of the Dread": {
-    "description": "Raises potency of magma by 14%",
-    "weight": 0.6,
-    "statType": "Magma Potency",
-    "statValue": "1.14"
-  },
-  "Enraged Divine Beast": {
-    "description": "Raises potency of storms by 10%",
-    "weight": 0.7,
-    "statType": "Storm Potency",
-    "statValue": "1.10"
-  },
-  "Beloved Stardust": {
-    "description": "Shortens casting speed +99 for sorcery and incantations by the utmost, but increases damage taken by 30%",
-    "weight": 1.3,
-    "statType": "Casting Speed Increase",
-    "statValue": "+99",
-    "statType2": "Damage Taken Increase",
-    "statValue2": "1.30"
-  },
-  "Talisman of Lord's Bestowal": {
-    "description": "Increases poise after using a flask of tears. ~54% poise for 2 seconds.",
-    "weight": 3.0,
-    "statType": "Poise Increase",
-    "statValue": "1.54"
-  },
-  "Verdigris Discus": {
-    "description": "Raises defense with higher equipment load. Heavy Load (7.5% PVP/10% PVE) Overload (15%PVP/20%PVE)",
-    "weight": 4.5,
-    "statType": "Defense Increase",
-    "statValue": "1.075 (Heavy Load PvP), 1.10 (Heavy Load PvE), 1.15 (Overload PvP), 1.20 (Overload PvE)"
-  },
-  "Rellana's Cameo": {
-    "description": "Enhances attacks by 15% after maintaining the same stance for 2 seconds",
-    "weight": 0.8,
-    "statType": "Attack Enhancement",
-    "statValue": "1.15"
-  },
-  "Blade of Mercy": {
-    "description": "Raises attack power by 20% for 20 seconds after each critical hit",
-    "weight": 1.3,
-    "statType": "Attack Power Increase",
-    "statValue": "1.20"
+    "statType": "FPRec",
+    "statValue": 1.30,
+    "multiple": false
   },
   "Blessed Dew Talisman": {
     "description": "Slowly restores HP at a rate of 2 HP/s.",
     "weight": 0.6,
-    "statType": "HP Restoration",
-    "statValue": "2 HP/sec"
+    "statType": "HPRec",
+    "statValue": "2 HP/sec",
+    "multiple": false
   },
-  "Green Turtle Talisman": {
-    "description": "Raises stamina recovery speed by 8/s (17.7%).",
-    "weight": 0.7,
-    "statType": "Stamina Recovery Speed",
-    "statValue": "8/s (17.7%)"
+  "Blessed Blue Dew Talisman": {
+    "description": "Slowly restores FP (0.5 FP per second)",
+    "weight": 1.2,
+    "statType": "FPRec",
+    "statValue": "0.5 FP/sec",
+    "multiple": false
   },
-  "Arsenal Charm": {
-    "description": "Raises maximum Equip Load by 15%",
-    "weight": 1.5,
-    "statType": "Equip Load Increase",
-    "statValue": "1.15"
-  },
-  "Arsenal Charm +1": {
-    "description": "Raises maximum Equip Load by 17%",
-    "weight": 1.5,
-    "statType": "Equip Load Increase",
-    "statValue": "1.17"
-  },
-  "Great-Jar's Arsenal": {
-    "description": "Raises maximum Equip Load by 19%.",
-    "weight": 1.5,
-    "statType": "Equip Load Increase",
-    "statValue": "1.19"
-  },
-  "Erdtree's Favor": {
-    "description": "Raises maximum HP (3%), Stamina (7%), and Equip Load (5%)",
-    "weight": 1.5,
-    "statType1": "Max HP Increase",
-    "statValue1": "1.03",
-    "statType2": "Stamina Increase",
-    "statValue2": "1.07",
-    "statType3": "Equip Load Increase",
-    "statValue3": "1.05"
-  },
-  "Erdtree's Favor +1": {
-    "description": "Raises maximum HP (3.5%), Stamina (8.5%), and Equip Load (6.5%)",
-    "weight": 1.5,
-    "statType1": "Max HP Increase",
-    "statValue1": "1.035",
-    "statType2": "Stamina Increase",
-    "statValue2": "1.085",
-    "statType3": "Equip Load Increase",
-    "statValue3": "1.065"
-  },
-  "Erdtree's Favor +2": {
-    "description": "Raises maximum HP (4%), Stamina (10%), and Equip Load (8%)",
-    "weight": 1.5,
-    "statType1": "Max HP Increase",
-    "statValue1": "1.04",
-    "statType2": "Stamina Increase",
-    "statValue2": "1.10",
-    "statType3": "Equip Load Increase",
-    "statValue3": "1.08"
-  },
-  "Radagon's Scarseal": {
-    "description": "Raises Vigor, Endurance, Strength, and Dexterity by 3, but increases all damage taken by 10%.",
-    "weight": 0.8,
-    "statType1": "Vigor/Endurance/Strength/Dexterity Increase",
-    "statValue1": "+3",
-    "statType2": "Damage Taken Increase",
-    "statValue2": "1.10"
-  },
-  "Radagon's Soreseal": {
-    "description": "Raises Vigor, Endurance, Strength, and Dexterity by 5, but increases all damage taken by 15%.",
-    "weight": 0.8,
-    "statType1": "Vigor/Endurance/Strength/Dexterity Increase",
-    "statValue1": "+5",
-    "statType2": "Damage Taken Increase",
-    "statValue2": "1.15"
-  },
-  "Marika's Scarseal": {
-    "description": "Raises Mind, Intelligence, Faith, and Arcane by 3, but increases all damage taken by 10%.",
-    "weight": 0.8,
-    "statType1": "Mind/Intelligence/Faith/Arcane Increase",
-    "statValue1": "+3",
-    "statType2": "Damage Taken Increase",
-    "statValue2": "1.10"
-  },
-  "Marika's Soreseal": {
-    "description": "Raises Mind, Intelligence, Faith, and Arcane by 5, but increases all damage taken by 15%.",
-    "weight": 0.8,
-    "statType1": "Mind/Intelligence/Faith/Arcane Increase",
-    "statValue1": "+5",
-    "statType2": "Damage Taken Increase",
-    "statValue2": "1.15"
-  },
-  "Outer God Heirloom": {
-    "description": "Raises Arcane by 5",
+  "Fine Crucible Feather Talisman": {
+    "description": "Improves backsteps but increases damage taken by 15%",
     "weight": 0.6,
-    "statType": "Arcane Increase",
-    "statValue": "+5"
+    "statType": "DmgTakenInc",
+    "statValue": 1.15,
+    "multiple": false
   },
-  "Prosthesis-Wearer Heirloom": {
-    "description": "Raises Dexterity by 5.",
+  "Shattered Stone Talisman": {
+    "description": "Raises potency of kicking and stomping skills by 10%",
     "weight": 0.8,
-    "statType": "Dexterity Increase",
-    "statValue": "+5"
+    "statType": "KickPot",
+    "statValue": 1.10,
+    "multiple": false
   },
-  "Starscourge Heirloom": {
-    "description": "Raises Strength by 5.",
-    "weight": 0.8,
-    "statType": "Strength Increase",
-    "statValue": "+5"
+  "Two-Handed Sword Talisman": {
+    "description": "Enhances attacks with two-handed weapons by 15%",
+    "weight": 1.2,
+    "statType": "2hAP",
+    "statValue": 1.15,
+    "multiple": false
   },
-  "Stargazer Heirloom": {
-    "description": "Raises Intelligence by 5.",
-    "weight": 0.6,
-    "statType": "Intelligence Increase",
-    "statValue": "+5"
+  "Crusade Insignia": {
+    "description": "Raises attack power by 15% for 20 seconds after defeating an enemy",
+    "weight": 1.2,
+    "statType": "APInc",
+    "statValue": 1.15,
+    "multiple": false
   },
-  "Two Fingers Heirloom": {
-    "description": "Raises Faith by 5.",
-    "weight": 0.6,
-    "statType": "Faith Increase",
-    "statValue": "+5"
-  },
-  "Dragoncrest Shield Talisman": {
-    "description": "Reduces Physical Damage taken by 10%",
-    "weight": 0.8,
-    "statType": "Physical Damage Reduction",
-    "statValue": "0.90"
-  },
-  "Dragoncrest Shield Talisman +1": {
-    "description": "Reduces Physical Damage taken by 13%",
-    "weight": 0.8,
-    "statType": "Physical Damage Reduction",
-    "statValue": "0.87"
-  },
-  "Dragoncrest Shield Talisman +2": {
-    "description": "Reduces Physical Damage taken by 17%",
-    "weight": 0.8,
-    "statType": "Physical Damage Reduction",
-    "statValue": "0.83"
-  },
-  "Dragoncrest Greatshield Talisman": {
-    "description": "Reduces Physical Damage taken by 20%.",
-    "weight": 0.8,
-    "statType": "Physical Damage Reduction",
-    "statValue": "0.80"
-  },
-  "Haligdrake Talisman": {
-    "description": "Reduces Holy Damage taken by 13%",
-    "weight": 0.6,
-    "statType": "Holy Damage Reduction",
-    "statValue": "0.87"
-  },
-  "Haligdrake Talisman +1": {
-    "description": "Reduces Holy Damage taken by 17%",
-    "weight": 0.6,
-    "statType": "Holy Damage Reduction",
-    "statValue": "0.83"
-  },
-  "Haligdrake Talisman +2": {
-    "description": "Reduces Holy Damage taken by 20%",
-    "weight": 0.6,
-    "statType": "Holy Damage Reduction",
-    "statValue": "0.80"
-  },
-  "Prince of Death's Pustule": {
-    "description": "Raises Vitality by 90.",
-    "weight": 0.6,
-    "statType": "Vitality Increase",
-    "statValue": "+90"
-  },
-  "Prince of Death's Cyst": {
-    "description": "Raises Vitality by 140.",
-    "weight": 0.6,
-    "statType": "Vitality Increase",
-    "statValue": "+140"
-  },
-  "Dagger Talisman": {
-    "description": "Increases Critical Damage by 17%.",
-    "weight": 1.1,
-    "statType": "Critical Damage Increase",
-    "statValue": "1.17"
-  },
-  "Curved Sword Talisman": {
-    "description": "Increases Guard Counter damage by 20%.",
-    "weight": 0.7,
-    "statType": "Guard Counter Damage Increase",
-    "statValue": "1.20"
-  },
-  "Twinblade Talisman": {
-    "description": "Increases damage of final hit in attack chains by 45%.",
-    "weight": 0.7,
-    "statType": "Final Hit Damage Increase",
-    "statValue": "1.45"
-  },
-  "Axe Talisman": {
-    "description": "Increases Charge Attack damage by 10%.",
-    "weight": 0.8,
-    "statType": "Charge Attack Damage Increase",
-    "statValue": "1.10"
-  },
-  "Hammer Talisman": {
-    "description": "Increases Stamina damage against blocking enemies by 40%.",
-    "weight": 0.9,
-    "statType": "Stamina Damage Increase",
-    "statValue": "1.40"
-  },
-  "Spear Talisman": {
-    "description": "Increases Counterattack damage of thrusting weapons by 15%.",
-    "weight": 0.5,
-    "statType": "Counterattack Damage Increase",
-    "statValue": "1.15"
-  },
-  "Lance Talisman": {
-    "description": "Increases damage of attacks while on horseback by 15%.",
-    "weight": 0.7,
-    "statType": "Horseback Attack Damage Increase",
-    "statValue": "1.15"
-  },
-  "Claw Talisman": {
-    "description": "Increases Jump Attack damage by 15%.",
-    "weight": 0.7,
-    "statType": "Jump Attack Damage Increase",
-    "statValue": "1.15"
-  },
-  "Greatshield Talisman": {
-    "description": "Reduces stamina damage taken while blocking by 20%.",
-    "weight": 0.9,
-    "statType": "Stamina Damage Reduction",
-    "statValue": "0.80"
-  },
-  "Arrow's Sting Talisman": {
-    "description": "Raises attack power of arrows and bolts by 10%.",
-    "weight": 0.7,
-    "statType": "Arrow/Bolt Attack Power Increase",
-    "statValue": "1.10"
-  },
-  "Arrow's Reach Talisman": {
-    "description": "Increases bow effective range by 65%.",
-    "weight": 0.7,
-    "statType": "Bow Range Increase",
-    "statValue": "1.65"
-  },
-  "Arrow's Soaring Sting Talisman": {
-    "description": "Increases the effective range of bows by 50% and raises attack power of arrows and bolts by 8%",
-    "weight": 1.1,
-    "statType1": "Bow Range Increase",
-    "statValue1": "1.50",
-    "statType2": "Arrow/Bolt Attack Power Increase",
-    "statValue2": "1.08"
-  },
-  "Graven-School Talisman": {
-    "description": "Increases damage of Sorceries by 4%.",
-    "weight": 0.7,
-    "statType": "Sorcery Damage Increase",
-    "statValue": "1.04"
-  },
-  "Graven-Mass Talisman": {
-    "description": "Increases damage of Sorceries by 8%.",
-    "weight": 1.0,
-    "statType": "Sorcery Damage Increase",
-    "statValue": "1.08"
-  },
-  "Faithful's Canvas Talisman": {
-    "description": "Increases damage of Incantations by 4%.",
-    "weight": 0.7,
-    "statType": "Incantation Damage Increase",
-    "statValue": "1.04"
+  "Aged One's Exultation": {
+    "description": "Increases attack power by 20% for 20 seconds when near poison or rot",
+    "weight": 1.2,
+    "statType": "APInc",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Flock's Canvas Talisman": {
     "description": "Increases damage of Incantations by 8%.",
     "weight": 1.0,
-    "statType": "Incantation Damage Increase",
-    "statValue": "1.08"
+    "statType": "IncDmgInc",
+    "statValue": 1.08,
+    "multiple": false
+  },
+  "Pearl Shield Talisman": {
+    "description": "Boosts all non-physical damage negation by 20% while guarding",
+    "weight": 0.9,
+    "statType": "NonPhysicalGuarding",
+    "statValue": 1.20,
+    "multiple": false
+  },
+  "Dried Bouquet": {
+    "description": "Raises attack power by 15% for 20 seconds when summoned spirit dies",
+    "weight": 0.8,
+    "statType": "APInc",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Smithing Talisman": {
+    "description": "Enhances weapon-throwing attacks by 10%",
+    "weight": 1.3,
+    "statType": "ThrownAttack",
+    "statValue": 1.10,
+    "multiple": false
+  },
+  "Ailment Talisman": {
+    "description": "Boosts resistance stats by roughly 350 for a short time after a status effect is applied to you",
+    "weight": 0.6,
+    "statType": "ResIncCond",
+    "statValue": "350",
+    "multiple": false
+  },
+  "Retaliatory Crossed-Tree": {
+    "description": "Enhances attacks executed after rolling or backstepping by 17%",
+    "weight": 0.3,
+    "statType": "RollDmgInc",
+    "statValue": 1.17,
+    "multiple": false
+  },
+  "Lacerating Crossed-Tree": {
+    "description": "Enhances dash attacks by 15% in PvE",
+    "weight": 0.8,
+    "statType": "DashAtt",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Sharpshot Talisman": {
+    "description": "Boosts attack power of precision-aimed shots by 12%",
+    "weight": 0.6,
+    "statType": "PrecisionShot",
+    "statValue": 1.12,
+    "multiple": false
+  },
+  "St. Trina's Smile": {
+    "description": "Sleep in the vicinity increases attack power by 20% for 30 seconds.",
+    "weight": 0.9,
+    "statType": "APInc",
+    "statValue": 1.20,
+    "multiple": false
+  },
+  "Talisman of the Dread": {
+    "description": "Raises potency of magma by 14%",
+    "weight": 0.6,
+    "statType": "MagmaPot",
+    "statValue": 1.14,
+    "multiple": false
+  },
+  "Enraged Divine Beast": {
+    "description": "Raises potency of storms by 10%",
+    "weight": 0.7,
+    "statType": "StormPot",
+    "statValue": 1.10,
+    "multiple": false
+  },
+  "Beloved Stardust": {
+    "description": "Shortens casting speed +99 for sorcery and incantations by the utmost, but increases damage taken by 30%",
+    "weight": 1.3,
+    "statType": [
+      "DmgTakenInc",
+      "CastSpeedInc"
+    ],
+    "statValue": [
+      1.30,
+      99
+    ],
+    "multiple": true
+  },
+  "Talisman of Lord's Bestowal": {
+    "description": "Increases poise after using a flask of tears. ~54% poise for 2 seconds.",
+    "weight": 3.0,
+    "statType": "PoiseInc",
+    "statValue": 1.54,
+    "multiple": false
+  },
+  "Verdigris Discus": {
+    "description": "Raises defense with higher equipment load. Heavy Load 10% Overload 20%",
+    "weight": 4.5,
+    "statType": [
+      "DefIncHeavy",
+      "DefIncOver"
+    ],
+    "statValue": [
+      1.10,
+      1.20
+    ],
+    "multiple": false
+  },
+  "Rellana's Cameo": {
+    "description": "Enhances attacks by 15% after maintaining the same stance for 2 seconds",
+    "weight": 0.8,
+    "statType": "APStance",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Blade of Mercy": {
+    "description": "Raises attack power by 20% for 20 seconds after each critical hit",
+    "weight": 1.3,
+    "statType": "APIncCrit",
+    "statValue": 1.20,
+    "multiple": false
+  },
+  "Green Turtle Talisman": {
+    "description": "Raises stamina recovery speed by 17.7%.",
+    "weight": 0.7,
+    "statType": "StaminaRec",
+    "statValue": 0.177,
+    "multiple": false
+  },
+  "Arsenal Charm": {
+    "description": "Raises maximum Equip Load by 15%",
+    "weight": 1.5,
+    "statType": "EquipLoad",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Arsenal Charm +1": {
+    "description": "Raises maximum Equip Load by 17%",
+    "weight": 1.5,
+    "statType": "EquipLoad",
+    "statValue": 1.17,
+    "multiple": false
+  },
+  "Great-Jar's Arsenal": {
+    "description": "Raises maximum Equip Load by 19%.",
+    "weight": 1.5,
+    "statType": "EquipLoad",
+    "statValue": 1.19,
+    "multiple": false
+  },
+  "Erdtree's Favor": {
+    "description": "Raises maximum HP (3%), Stamina (7%), and Equip Load (5%)",
+    "weight": 1.5,
+    "statType": [
+      "HP",
+      "Stamina",
+      "EquipLoad"
+    ],
+    "statValue": [
+      1.03,
+      1.07,
+      1.05
+    ],
+    "multiple": true
+  },
+  "Erdtree's Favor +1": {
+    "description": "Raises maximum HP (3.5%), Stamina (8.5%), and Equip Load (6.5%)",
+    "weight": 1.5,
+    "statType": [
+      "HP",
+      "Stamina",
+      "EquipLoad"
+    ],
+    "statValue": [
+      1.035,
+      1.085,
+      1.065
+    ],
+    "multiple": true
+  },
+  "Erdtree's Favor +2": {
+    "description": "Raises maximum HP (4%), Stamina (10%), and Equip Load (8%)",
+    "weight": 1.5,
+    "statType": [
+      "HP",
+      "Stamina",
+      "EquipLoad"
+    ],
+    "statValue": [
+      1.04,
+      1.10,
+      1.08
+    ],
+    "multiple": true
+  },
+  "Radagon's Scarseal": {
+    "description": "Raises Vigor, Endurance, Strength, and Dexterity by 3, but increases all damage taken by 10%.",
+    "weight": 0.8,
+    "statType": [
+      "Vigor",
+      "Endurance",
+      "Strength",
+      "Dexterity",
+      "DmgTakenInc"
+    ],
+    "statValue": [
+      3,
+      3,
+      3,
+      3,
+      1.10
+    ],
+    "multiple": true
+  },
+  "Radagon's Soreseal": {
+    "description": "Raises Vigor, Endurance, Strength, and Dexterity by 5, but increases all damage taken by 15%.",
+    "weight": 0.8,
+    "statType": [
+      "Vigor",
+      "Endurance",
+      "Strength",
+      "Dexterity",
+      "DmgTakenInc"
+    ],
+    "statValue": [
+      5,
+      5,
+      5,
+      5,
+      1.15
+    ],
+    "multiple": true
+  },
+  "Marika's Scarseal": {
+    "description": "Raises Mind, Intelligence, Faith, and Arcane by 3, but increases all damage taken by 10%.",
+    "weight": 0.8,
+    "statType": [
+      "Mind",
+      "Intelligence",
+      "Faith",
+      "Arcane",
+      "DmgTakenInc"
+    ],
+    "statValue": [
+      3,
+      3,
+      3,
+      3,
+      1.10
+    ],
+    "multiple": true
+  },
+  "Marika's Soreseal": {
+    "description": "Raises Mind, Intelligence, Faith, and Arcane by 5, but increases all damage taken by 15%.",
+    "weight": 0.8,
+    "statType": [
+      "Mind",
+      "Intelligence",
+      "Faith",
+      "Arcane",
+      "DmgTakenInc"
+    ],
+    "statValue": [
+      5,
+      5,
+      5,
+      5,
+      1.15
+    ],
+    "multiple": true
+  },
+  "Outer God Heirloom": {
+    "description": "Raises Arcane by 5",
+    "weight": 0.6,
+    "statType": "Arcane",
+    "statValue": 5,
+    "multiple": false
+  },
+  "Prosthesis-Wearer Heirloom": {
+    "description": "Raises Dexterity by 5.",
+    "weight": 0.8,
+    "statType": "Dexterity",
+    "statValue": 5,
+    "multiple": false
+  },
+  "Starscourge Heirloom": {
+    "description": "Raises Strength by 5.",
+    "weight": 0.8,
+    "statType": "Strength",
+    "statValue": 5,
+    "multiple": false
+  },
+  "Stargazer Heirloom": {
+    "description": "Raises Intelligence by 5.",
+    "weight": 0.6,
+    "statType": "Intelligence",
+    "statValue": 5,
+    "multiple": false
+  },
+  "Two Fingers Heirloom": {
+    "description": "Raises Faith by 5.",
+    "weight": 0.6,
+    "statType": "Faith",
+    "statValue": 5,
+    "multiple": false
+  },
+  "Dragoncrest Shield Talisman": {
+    "description": "Reduces Physical Damage taken by 10%",
+    "weight": 0.8,
+    "statType": "PhysRed",
+    "statValue": 0.90,
+    "multiple": false
+  },
+  "Dragoncrest Shield Talisman +1": {
+    "description": "Reduces Physical Damage taken by 13%",
+    "weight": 0.8,
+    "statType": "PhysRed",
+    "statValue": 0.87,
+    "multiple": false
+  },
+  "Dragoncrest Shield Talisman +2": {
+    "description": "Reduces Physical Damage taken by 17%",
+    "weight": 0.8,
+    "statType": "PhysRed",
+    "statValue": 0.83,
+    "multiple": false
+  },
+  "Dragoncrest Greatshield Talisman": {
+    "description": "Reduces Physical Damage taken by 20%.",
+    "weight": 0.8,
+    "statType": "PhysRed",
+    "statValue": 0.80,
+    "multiple": false
+  },
+  "Haligdrake Talisman": {
+    "description": "Reduces Holy Damage taken by 13%",
+    "weight": 0.6,
+    "statType": "HolyRed",
+    "statValue": 0.87,
+    "multiple": false
+  },
+  "Haligdrake Talisman +1": {
+    "description": "Reduces Holy Damage taken by 17%",
+    "weight": 0.6,
+    "statType": "HolyRed",
+    "statValue": 0.83,
+    "multiple": false
+  },
+  "Haligdrake Talisman +2": {
+    "description": "Reduces Holy Damage taken by 20%",
+    "weight": 0.6,
+    "statType": "HolyRed",
+    "statValue": 0.80,
+    "multiple": false
+  },
+  "Prince of Death's Pustule": {
+    "description": "Raises Vitality by 90.",
+    "weight": 0.6,
+    "statType": "Vitality",
+    "statValue": 90,
+    "multiple": false
+  },
+  "Prince of Death's Cyst": {
+    "description": "Raises Vitality by 140.",
+    "weight": 0.6,
+    "statType": "Vitality",
+    "statValue": 140,
+    "multiple": false
+  },
+  "Dagger Talisman": {
+    "description": "Increases Critical Damage by 17%.",
+    "weight": 1.1,
+    "statType": "CritDmgInc",
+    "statValue": 1.17,
+    "multiple": false
+  },
+  "Curved Sword Talisman": {
+    "description": "Increases Guard Counter damage by 20%.",
+    "weight": 0.7,
+    "statType": "GuardCntDmgInc",
+    "statValue": 1.20,
+    "multiple": false
+  },
+  "Twinblade Talisman": {
+    "description": "Increases damage of final hit in attack chains by 45%.",
+    "weight": 0.7,
+    "statType": "FinalHitDmgInc",
+    "statValue": 1.45,
+    "multiple": false
+  },
+  "Axe Talisman": {
+    "description": "Increases Charge Attack damage by 10%.",
+    "weight": 0.8,
+    "statType": "ChargeAttDmgInc",
+    "statValue": 1.10,
+    "multiple": false
+  },
+  "Hammer Talisman": {
+    "description": "Increases Stamina damage against blocking enemies by 40%.",
+    "weight": 0.9,
+    "statType": "StaminaDmgInc",
+    "statValue": 1.40,
+    "multiple": false
+  },
+  "Spear Talisman": {
+    "description": "Increases Counterattack damage of thrusting weapons by 15%.",
+    "weight": 0.5,
+    "statType": "CounterattackDmgInc",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Lance Talisman": {
+    "description": "Increases damage of attacks while on horseback by 15%.",
+    "weight": 0.7,
+    "statType": "HorsebackAttDmgInc",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Claw Talisman": {
+    "description": "Increases Jump Attack damage by 15%.",
+    "weight": 0.7,
+    "statType": "JumpAttDmgInc",
+    "statValue": 1.15,
+    "multiple": false
+  },
+  "Greatshield Talisman": {
+    "description": "Reduces stamina damage taken while blocking by 20%.",
+    "weight": 0.9,
+    "statType": "StaminaDmgRed",
+    "statValue": 0.80,
+    "multiple": false
+  },
+  "Arrow's Sting Talisman": {
+    "description": "Raises attack power of arrows and bolts by 10%.",
+    "weight": 0.7,
+    "statType": "ArrowAttDmgInc",
+    "statValue": 1.10,
+    "multiple": false
+  },
+  "Arrow's Reach Talisman": {
+    "description": "Increases bow effective range by 65%.",
+    "weight": 0.7,
+    "statType": "BowRngInc",
+    "statValue": 1.65,
+    "multiple": false
+  },
+  "Arrow's Soaring Sting Talisman": {
+    "description": "Increases the effective range of bows by 50% and raises attack power of arrows and bolts by 8%",
+    "weight": 1.1,
+    "statType": [
+      "BowRngInc",
+      "arrowAttDmgInc"
+    ],
+    "statValue": [
+      1.50,
+      1.08
+    ],
+    "multiple": true
+  },
+  "Graven-School Talisman": {
+    "description": "Increases damage of Sorceries by 4%.",
+    "weight": 0.7,
+    "statType": "SorcDmgInc",
+    "statValue": 1.04,
+    "multiple": false
+  },
+  "Graven-Mass Talisman": {
+    "description": "Increases damage of Sorceries by 8%.",
+    "weight": 1.0,
+    "statType": "SorcDmgInc",
+    "statValue": 1.08,
+    "multiple": false
+  },
+  "Faithful's Canvas Talisman": {
+    "description": "Increases damage of Incantations by 4%.",
+    "weight": 0.7,
+    "statType": "IncDmgInc",
+    "statValue": 1.04,
+    "multiple": false
   },
   "Primal Glintstone Blade": {
     "description": "Spells consume 25% less FP, but maximum HP is reduced by 15%.",
     "weight": 0.6,
-    "statType1": "FP Consumption Reduction",
-    "statValue1": "0.75",
-    "statType2": "Max HP Reduction",
-    "statValue2": "0.85"
+    "statType": [
+      "FP Consumption Reduction",
+      "Max HP Reduction"
+    ],
+    "statValue": [
+      0.75,
+      0.85
+    ],
+    "multiple": true
   },
   "Moon of Nokstella": {
     "description": "Increases memory slots by 2.",
     "weight": 0.8,
-    "statType": "Memory Slots Increase",
-    "statValue": "+2"
+    "statType": "MemorySlotsInc",
+    "statValue": "2",
+    "multiple": false
   },
   "Old Lord's Talisman": {
     "description": "Extends spell effect duration by 30%.",
     "weight": 0.5,
-    "statType": "Spell Effect Duration Increase",
-    "statValue": "1.30"
+    "statType": "SpellEffectDurInc",
+    "statValue": 1.30,
+    "multiple": false
   },
   "Radagon Icon": {
     "description": "Shortens spell casting time by 30 Virtual Dexterity.",
     "weight": 0.7,
-    "statType": "Spell Casting Time Reduction",
-    "statValue": "0.70"
+    "statType": "SpellCastTimeRed",
+    "statValue": 0.70,
+    "multiple": false
   },
   "Roar Medallion": {
     "description": "Increases damage of roars and breath attacks by 15%.",
     "weight": 0.7,
-    "statType": "Roar/Breath Attack Damage Increase",
-    "statValue": "1.15"
+    "statType": "RoarAttDmgInc",
+    "statValue": 1.15,
+    "multiple": false
   },
   "Companion Jar": {
     "description": "Increases damage of throwing pots by 20%.",
     "weight": 0.6,
-    "statType": "Throwing Pot Damage Increase",
-    "statValue": "1.20"
+    "statType": "ThrowPotDmgInc",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Perfumer's Talisman": {
     "description": "Increases damage of perfume items by 20%.",
     "weight": 0.6,
-    "statType": "Perfume Item Damage Increase",
-    "statValue": "1.20"
+    "statType": "PerfumeDmgInc",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Carian Filigreed Crest": {
     "description": "Lowers FP consumed by Skills by 25%.",
     "weight": 0.8,
-    "statType": "Skill FP Consumption Reduction",
-    "statValue": "0.75"
+    "statType": "SkillFPConsRed",
+    "statValue": 0.75,
+    "multiple": false
   },
   "Warrior Jar Shard": {
     "description": "Boosts the attack power of Skills by 10%.",
     "weight": 0.9,
-    "statType": "Skill Attack Power Increase",
-    "statValue": "1.10"
+    "statType": "SkillAPInc",
+    "statValue": 1.10,
+    "multiple": false
   },
   "Shard of Alexander": {
     "description": "Greatly boosts the attack power of Skills by 15%.",
     "weight": 0.9,
-    "statType": "Skill Attack Power Increase",
-    "statValue": "1.15"
+    "statType": "SkillAPInc",
+    "statValue": 1.15,
+    "multiple": false
   },
   "Godfrey Icon": {
     "description": "Increases attack power of charged Spells and Skills by 15%.",
     "weight": 0.8,
-    "statType": "Charged Spell/Skill Attack Power Increase",
-    "statValue": "1.15"
+    "statType": "ChargeAPInc",
+    "statValue": 1.15,
+    "multiple": false
   },
   "Bull-Goat's Talisman": {
     "description": "Raises Poise by 33%.",
     "weight": 0.5,
-    "statType": "Poise Increase",
-    "statValue": "1.33"
+    "statType": "PoiseInc",
+    "statValue": 1.33,
+    "multiple": false
   },
   "Blue Dancer Charm": {
     "description": "Raises physical scaling damage with lower equipment load by up to 15%.",
     "weight": 0.9,
-    "statType": "Physical Scaling Damage Increase",
-    "statValue": "1.15"
+    "statType": "PhysDmgInc",
+    "statValue": 1.15,
+    "multiple": false
   },
   "Magic Scorpion Charm": {
     "description": "Raises Magic Damage by 12%, but increases Physical Damage taken by 10%.",
     "weight": 0.8,
-    "statType1": "Magic Damage Increase",
-    "statValue1": "1.12",
-    "statType2": "Physical Damage Taken Increase",
-    "statValue2": "1.10"
+    "statType": [
+      "MagicDmgInc",
+      "PhysDmgTakenInc"
+    ],
+    "statValue": [
+      1.12,
+      1.10
+    ],
+    "multiple": true
   },
   "Fire Scorpion Charm": {
     "description": "Raises Fire Damage, but increases Physical Damage taken by 10%.",
     "weight": 0.8,
-    "statType1": "Fire Damage Increase",
-    "statValue1": "1.10",
-    "statType2": "Physical Damage Taken Increase",
-    "statValue2": "1.10"
+    "statType": [
+      "FireDmgInc",
+      "PhysDmgTakenInc"
+    ],
+    "statValue": [
+      1.12,
+      1.10
+    ],
+    "multiple": true
   },
   "Lightning Scorpion Charm": {
     "description": "Raises Lightning Damage, but increases Physical Damage taken by 10%.",
     "weight": 0.8,
-    "statType1": "Lightning Damage Increase",
-    "statValue1": "1.10",
-    "statType2": "Physical Damage Taken Increase",
-    "statValue2": "1.10"
+    "statType": [
+      "LightDmgInc",
+      "PhysDmgTakenInc"
+    ],
+    "statValue": [
+      1.12,
+      1.10
+    ],
+    "multiple": true
   },
   "Sacred Scorpion Charm": {
     "description": "Raises Holy Damage, but increases Physical Damage taken by 10%.",
     "weight": 0.8,
-    "statType1": "Holy Damage Increase",
-    "statValue1": "1.10",
-    "statType2": "Physical Damage Taken Increase",
-    "statValue2": "1.10"
+    "statType": [
+      "HolyDmgInc",
+      "PhysDmgTakenInc"
+    ],
+    "statValue": [
+      1.12,
+      1.10
+    ],
+    "multiple": true
   },
   "Crucible Scale Talisman": {
     "description": "Reduces damage taken from critical hits by 30%.",
     "weight": 1.1,
-    "statType": "Critical Hit Damage Reduction",
-    "statValue": "0.70"
+    "statType": "HeadShot",
+    "statValue": 0.70,
+    "multiple": false
   },
   "Crucible Feather Talisman": {
     "description": "Improves dodge rolling by +6 iframes, but increases damage taken by 30%.",
     "weight": 0.8,
-    "statType1": "Dodge Rolling Iframes Increase",
-    "statValue1": "+6",
-    "statType2": "Damage Taken Increase",
-    "statValue2": "1.30"
+    "statType": "DmgTakenInc",
+    "statValue": 1.30,
+    "multiple": false
   },
   "Crucible Knot Talisman": {
     "description": "Prevents taking increased damage and being staggered from headshots.",
     "weight": 0.5,
-    "statType1": "Headshot Damage Increase Prevention",
-    "statValue1": "No Increase",
-    "statType2": "Headshot Stagger Prevention",
-    "statValue2": "Prevents"
+    "statType": "Headshot",
+    "statValue": "",
+    "multiple": false
   },
   "Talisman of All Crucibles": {
     "description": "Grants effects of all crucible talismans",
     "weight": 1.9,
     "statType": "Crucible Talisman Effects",
-    "statValue": "All"
+    "statValue": "All",
+    "multiple": false
   },
   "Red-Feathered Branchsword": {
     "description": "Raises attack power by 20% when HP is below 20%.",
     "weight": 1.4,
-    "statType": "Attack Power Increase",
-    "statValue": "1.20",
-    "statType2": "HP Threshold",
-    "statValue2": "Below 20%"
+    "statType": "APInc",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Blue-Feathered Branchsword": {
     "description": "Reduces damage taken by 50% when HP is below 20%.",
     "weight": 1.1,
     "statType": "Damage Taken Reduction",
-    "statValue": "0.50",
-    "statType2": "HP Threshold",
-    "statValue2": "Below 20%"
+    "statValue": 0.50,
+    "multiple": false
   },
   "Ritual Sword Talisman": {
     "description": "Raises attack power by 10% when HP is at maximum.",
     "weight": 0.9,
-    "statType": "Attack Power Increase",
-    "statValue": "1.10",
-    "statType2": "HP Threshold",
-    "statValue2": "At Maximum"
+    "statType": "APInc",
+    "statValue": 1.10,
+    "multiple": false
   },
   "Ritual Shield Talisman": {
     "description": "Reduces damage taken by 30% when HP is at maximum.",
     "weight": 0.9,
     "statType": "Damage Taken Reduction",
-    "statValue": "0.70",
-    "statType2": "HP Threshold",
-    "statValue2": "At Maximum"
+    "statValue": 0.70,
+    "multiple": false
   },
   "Assassin's Crimson Dagger": {
     "description": "Critical hits restore 10% + 85 HP.",
     "weight": 0.8,
-    "statType1": "Critical Hit HP Restore %",
-    "statValue1": "0.10",
-    "statType2": "Critical Hit HP Restore Fixed",
-    "statValue2": "+85"
+    "statType": "Critical Hit HP Restore %",
+    "statValue": 0.10,
+    "multiple": false
   },
   "Assassin's Cerulean Dagger": {
     "description": "Critical hits restore 15 FP.",
     "weight": 0.8,
     "statType": "Critical Hit FP Restore",
-    "statValue": "+15"
+    "statValue": 15,
+    "multiple": false
   },
   "Winged Sword Insignia": {
-    "description": "Raises attack power with successive attacks (3% → 5% → 10%).",
+    "description": "Raises attack power with successive attacks (3% \u2192 5% \u2192 10%).",
     "weight": 1.4,
-    "statType1": "Successive Attack Power Increase 1",
-    "statValue1": "1.03",
-    "statType2": "Successive Attack Power Increase 2",
-    "statValue2": "1.05",
-    "statType3": "Successive Attack Power Increase 3",
-    "statValue3": "1.10"
+    "statType": "SuccessiveAPInc",
+    "statValue": 1.03,
+    "multiple": false
   },
   "Rotten Winged Sword Insignia": {
-    "description": "Greatly raises attack power with successive attacks (6% → 8% → 13%).",
+    "description": "Greatly raises attack power with successive attacks (6% \u2192 8% \u2192 13%).",
     "weight": 1.4,
-    "statType1": "Successive Attack Power Increase 1",
-    "statValue1": "1.06",
-    "statType2": "Successive Attack Power Increase 2",
-    "statValue2": "1.08",
-    "statType3": "Successive Attack Power Increase 3",
-    "statValue3": "1.13"
+    "statType": "SuccessiveAPInc",
+    "statValue": 1.06,
+    "multiple": false
   },
   "Millicent's Prosthesis": {
-    "description": "Raises dexterity by 5 and raises attack power with successive attacks (4% → 6% → 11%).",
+    "description": "Raises dexterity by 5 and raises attack power with successive attacks (4% \u2192 6% \u2192 11%).",
     "weight": 1.6,
-    "statType1": "Dexterity Increase",
-    "statValue1": "+5",
-    "statType2": "Successive Attack Power Increase 1",
-    "statValue2": "1.04",
-    "statType3": "Successive Attack Power Increase 2",
-    "statValue3": "1.06",
-    "statType4": "Successive Attack Power Increase 3",
-    "statValue4": "1.11"
+    "statType": "Dexterity",
+    "statValue": 5,
+    "multiple": false
   },
   "Godskin Swaddling Cloth": {
     "description": "Successive attacks restore 3% + 30 HP.",
     "weight": 0.9,
-    "statType1": "Successive Attack HP Restore %",
-    "statValue1": "0.03",
-    "statType2": "Successive Attack HP Restore Fixed",
-    "statValue2": "+30"
+    "statType": "Successive Attack HP Restore %",
+    "statValue": 0.03,
+    "multiple": false
   },
   "Kindred of Rot's Exultation": {
     "description": "Poisoning or rot in vicinity increases attack power by 20% for 20s.",
     "weight": 0.9,
-    "statType": "Attack Power Increase",
-    "statValue": "1.20",
-    "statType2": "Duration",
-    "statValue2": "20s"
+    "statType": "APInc",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Lord of Blood's Exultation": {
     "description": "Blood loss in vicinity increases attack power by 20% for 20s.",
     "weight": 0.9,
-    "statType": "Attack Power Increase",
-    "statValue": "1.20",
-    "statType2": "Duration",
-    "statValue2": "20s"
+    "statType": "APInc",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Taker's Cameo": {
     "description": "Restores 3% + 30 HP upon defeating enemies.",
     "weight": 1.0,
-    "statType1": "Enemy Defeat HP Restore %",
-    "statValue1": "0.03",
-    "statType2": "Enemy Defeat HP Restore Fixed",
-    "statValue2": "+30"
+    "statType": "HPRest%",
+    "statValue": "3% + 30",
+    "multiple": false
   },
   "Ancestral Spirit's Horn": {
     "description": "Restores 3 FP upon defeating enemies.",
     "weight": 1.2,
-    "statType": "FP Restore on Enemy Defeat",
-    "statValue": "+3"
+    "statType": "FPRest",
+    "statValue": 3,
+    "multiple": false
   },
   "Gold Scarab": {
     "description": "Increases runes obtained from defeated enemies by 20%.",
     "weight": 1.2,
-    "statType": "Runes Obtained Increase",
-    "statValue": "1.20"
+    "statType": "Runes",
+    "statValue": 1.20,
+    "multiple": false
   },
   "Silver Scarab": {
     "description": "Raises item discovery by 75.",
     "weight": 1.2,
-    "statType": "Item Discovery Increase",
-    "statValue": "+75"
+    "statType": "Discovery",
+    "statValue": 75,
+    "multiple": false
   },
   "Crepus's Vial": {
     "description": "Eliminates all sound made by the wearer during movement.",
     "weight": 0.7,
     "statType": "Movement Sound Elimination",
-    "statValue": "Eliminated"
+    "statValue": "",
+    "multiple": false
   },
   "Concealing Veil": {
     "description": "Conceals wearer while crouching away from foes.",
     "weight": 0.9,
     "statType": "Crouching Concealment",
-    "statValue": "Concealed"
+    "statValue": "",
+    "multiple": false
   },
   "Longtail Cat Talisman": {
     "description": "Renders the wearer immune to non-lethal Fall Damage.",
     "weight": 0.6,
-    "statType": "Fall Damage Immunity",
-    "statValue": "Non-Lethal"
+    "statType": "FallDmg",
+    "statValue": 0,
+    "multiple": false
   },
   "Furled Finger's Trick-Mirror": {
     "description": "Take on appearance of a Host of Fingers.",
     "weight": 0.7,
     "statType": "Appearance Change",
-    "statValue": "Host of Fingers"
+    "statValue": "Host of Fingers",
+    "multiple": false
   },
   "Host's Trick-Mirror": {
     "description": "Take on appearance of a cooperator.",
     "weight": 0.7,
     "statType": "Appearance Change",
-    "statValue": "Cooperator"
+    "statValue": "Cooperator",
+    "multiple": false
   },
   "Shabriri's Woe": {
     "description": "Constantly attracts enemies' aggression.",
     "weight": 0.6,
     "statType": "Enemy Aggression Increase",
-    "statValue": "Constant"
+    "statValue": "",
+    "multiple": false
   },
   "Daedicar's Woe": {
     "description": "Increases damage taken by 100%.",
     "weight": 0.8,
-    "statType": "Damage Taken Increase",
-    "statValue": "2.00"
+    "statType": "DmgTakenInc",
+    "statValue": 2.00,
+    "multiple": false
   },
   "Sacrificial Twig": {
     "description": "Will be lost on death in place of runes.",
     "weight": 1.0,
-    "statType": "Rune Loss Prevention",
-    "statValue": "Will Be Lost"
+    "statType": "RuneLoss",
+    "statValue": "",
+    "multiple": false
   }
 }

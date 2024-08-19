@@ -1,21 +1,43 @@
 import allTalismans from './talismans.json'
 
+//stat='Level' for artifitial level 
 function applyTalismansEffectValue(statVal, chosenEquipment, stat) {
   const chosenTalismans = Object.values(chosenEquipment.talismans);
-  /*chosenTalismans.forEach(talisman => {
-    console.log(talisman);
-    console.log(allTalismans[talisman]);
-  })*/
+
   chosenTalismans.forEach(talisman => {
-    if (allTalismans[talisman].statType === stat && talisman !== "None") {
+    if (allTalismans[talisman].multiple) {
+      for (let i = 0; i < allTalismans[talisman].statType.length; i++) {
+        if (allTalismans[talisman].statType[i] === stat) {
+          statVal *= parseFloat(allTalismans[talisman].statValue[i])
+        }
+      }
+    } else if (allTalismans[talisman].statType === stat && talisman !== "None") {
       statVal *= parseFloat(allTalismans[talisman].statValue);
     }
   });
   return statVal;
 }
 
+function addTalismansEffectValue(statVal, chosenEquipment, stat) {
+  const chosenTalismans = Object.values(chosenEquipment.talismans);
+
+  chosenTalismans.forEach(talisman => {
+    if (allTalismans[talisman].multiple) {
+      for (let i = 0; i < allTalismans[talisman].statType.length; i++) {
+        if (allTalismans[talisman].statType[i] === stat || stat === 'Level') {
+          statVal += parseFloat(allTalismans[talisman].statValue[i])
+        }
+      }
+    } else if (allTalismans[talisman].statType === stat && talisman !== "None") {
+      statVal += parseFloat(allTalismans[talisman].statValue);
+    }
+  });
+  return statVal;
+}
+
 function updateHP(lvl, chosenEquipment) {
-  let stat = 0
+  let stat = 0;
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, "Vigor");
   if (lvl >= 61) {
     stat = 1900 + 200 * (1 - Math.pow((1 - ((lvl - 60) / 39)), 1.2));
   } else if (lvl >= 41) {
@@ -25,52 +47,45 @@ function updateHP(lvl, chosenEquipment) {
   } else {
     stat = 300 + 500 * (Math.pow((((lvl - 1) / 24)), 1.5))
   }
-
   return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "HP"));
 }
 
-function updateFP(lvl) {
+function updateFP(lvl, chosenEquipment) {
+  let stat = 0;
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, "Mind");
   if (lvl >= 61) {
-    return Math.floor(
-      350 + 100 * (((((lvl - 60) / 39)), 1.2))
-    );
+    stat = 350 + 100 * (((((lvl - 60) / 39)), 1.2));
   } else if (lvl >= 36) {
-    return Math.floor(
-      200 + 150 * (1 - Math.pow((1 - ((lvl - 35) / 25)), 1.2))
-    )
+    stat = 200 + 150 * (1 - Math.pow((1 - ((lvl - 35) / 25)), 1.2));
   } else if (lvl >= 16) {
-    return Math.floor(
-      95 + 105 * (((((lvl - 15) / 20))))
-    )
+    stat = 95 + 105 * (((((lvl - 15) / 20))));
   } else {
-    return Math.floor(
-      50 + 45 * (((((lvl - 1) / 14))))
-    )
+    stat = 50 + 45 * (((((lvl - 1) / 14))));
   }
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "FP"));
 }
 
-function updateStamina(lvl) {
+function updateStamina(lvl, chosenEquipment) {
+  let stat = 0;
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Endurance');
   if (lvl >= 61) {
-    return Math.floor(
-      155 + 15 * (((((lvl - 50) / 49))))
-    );
+    stat = 155 + 15 * (((((lvl - 50) / 49))));
   } else if (lvl >= 36) {
-    return Math.floor(
-      130 + 25 * (((((lvl - 30) / 20))))
-    )
+    stat = 130 + 25 * (((((lvl - 30) / 20))));
   } else if (lvl >= 16) {
-    return Math.floor(
-      105 + 25 * (((((lvl - 15) / 15))))
-    )
+    stat = 105 + 25 * (((((lvl - 15) / 15))));
   } else {
-    return Math.floor(
-      80 + 25 * (((((lvl - 1) / 14))))
-    )
+    stat = 80 + 25 * (((((lvl - 1) / 14))));
   }
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "Stamina"));
 }
 
-function updateImmunity(vigor, level) {
+function updateImmunity(vigor, level, chosenEquipment) {
   let stat = 0
+  console.log(vigor);
+  vigor = addTalismansEffectValue(vigor, chosenEquipment, 'Vigor');
+  level = addTalismansEffectValue(level, chosenEquipment, 'Level');
+  console.log(vigor);
   if (level >= 162) {
     stat = 160 + 20 * (((((level + 79 - 240) / 552))));
   } else if (level >= 112) {
@@ -89,11 +104,13 @@ function updateImmunity(vigor, level) {
   } else {
     stat += 0;
   }
-  return Math.floor(stat);
+  return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Immunity"));
 }
 
-function updateFocus(mind, level) {
+function updateFocus(mind, level, chosenEquipment) {
   let stat = 0
+  mind = addTalismansEffectValue(mind, chosenEquipment, 'Mind');
+  level = addTalismansEffectValue(level, chosenEquipment, 'Level');
   if (level >= 162) {
     stat = 160 + 20 * (((((level + 79 - 240) / 552))));
   } else if (level >= 112) {
@@ -112,11 +129,13 @@ function updateFocus(mind, level) {
   } else {
     stat += 0;
   }
-  return Math.floor(stat);
+  return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Focus"));
 }
 
-function updateRobustness(endurance, level) {
+function updateRobustness(endurance, level, chosenEquipment) {
   let stat = 0
+  endurance = addTalismansEffectValue(endurance, chosenEquipment, 'Endurance');
+  level = addTalismansEffectValue(level, chosenEquipment, 'Level');
   if (level >= 162) {
     stat = 160 + 20 * (((((level + 79 - 240) / 552))));
   } else if (level >= 112) {
@@ -135,21 +154,26 @@ function updateRobustness(endurance, level) {
   } else {
     stat += 0;
   }
-  return Math.floor(stat);
+  return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Robustness"));
 }
 
-function updateEquipLoad(lvl) {
-  if (lvl >= 61) {
-    return Math.round(10 * (120 + 40 * (((((lvl - 60) / 39)))))) / 10;
-  } else if (lvl >= 26) {
-    return Math.round(10 * (72 + 48 * (((Math.pow(((lvl - 25) / 35), 1.1)))))) / 10;
-  } else {
-    return Math.round(10 * (45 + 27 * (((((lvl - 8) / 17)))))) / 10;
-  }
-}
-
-function updatePhysicalDef(strength, lvl) {
+function updateEquipLoad(lvl, chosenEquipment) {
   let stat = 0;
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Endurance');
+  if (lvl >= 61) {
+    stat = ((120 + 40 * (((((lvl - 60) / 39))))));
+  } else if (lvl >= 26) {
+    stat = ((72 + 48 * (((Math.pow(((lvl - 25) / 35), 1.1))))));
+  } else {
+    stat = ((45 + 27 * (((((lvl - 8) / 17))))));
+  }
+  return Math.round(10 * applyTalismansEffectValue(stat, chosenEquipment, "EquipLoad")) / 10;
+}
+
+function updatePhysicalDef(strength, lvl, chosenEquipment) {
+  let stat = 0;
+  strength = addTalismansEffectValue(strength, chosenEquipment, 'Strength');
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Level');
   if (lvl >= 161) {
     stat = (135 + (lvl - 161) / 27.6);
   } else if (lvl >= 92) {
@@ -168,11 +192,13 @@ function updatePhysicalDef(strength, lvl) {
   } else {
     stat += (strength / 3);
   }
-  return Math.floor(stat);
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "PhysDef"));
 }
 
-function updateMagicDef(inteligence, lvl) {
+function updateMagicDef(inteligence, lvl, chosenEquipment) {
   let stat = 0;
+  inteligence = addTalismansEffectValue(inteligence, chosenEquipment, "Intelligence");
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Level');
   if (lvl >= 161) {
     stat = (135 + (lvl - 161) / 27.6);
   } else if (lvl >= 92) {
@@ -191,11 +217,13 @@ function updateMagicDef(inteligence, lvl) {
   } else {
     stat += (inteligence * 2);
   }
-  return Math.floor(stat);
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "Magic Def"));
 }
 
-function updateFireDef(vigor, lvl) {
+function updateFireDef(vigor, lvl, chosenEquipment) {
   let stat = 0;
+  vigor = addTalismansEffectValue(vigor, chosenEquipment, "Vigor");
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Level');
   if (lvl >= 161) {
     stat = (135 + (lvl - 161) / 27.6);
   } else if (lvl >= 92) {
@@ -214,11 +242,12 @@ function updateFireDef(vigor, lvl) {
   } else {
     stat += (vigor / 1.5);
   }
-  return Math.floor(stat);
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "Fire Def"))
 }
 
-function updateLightningDef(lvl) {
+function updateLightningDef(lvl, chosenEquipment) {
   let stat = 0;
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Level');
   if (lvl >= 161) {
     stat = (135 + (lvl - 161) / 27.6);
   } else if (lvl >= 92) {
@@ -228,11 +257,13 @@ function updateLightningDef(lvl) {
   } else {
     stat = (40 + (lvl + 78) / 2.483);
   }
-  return Math.floor(stat);
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "Lightning Def"));
 }
 
-function updateHolyDef(arcane, lvl) {
+function updateHolyDef(arcane, lvl, chosenEquipment) {
   let stat = 0;
+  arcane = addTalismansEffectValue(arcane, chosenEquipment, 'Arcane');
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Level');
   if (lvl >= 161) {
     stat = (135 + (lvl - 161) / 27.6);
   } else if (lvl >= 92) {
@@ -251,15 +282,18 @@ function updateHolyDef(arcane, lvl) {
   } else {
     stat += (arcane * 2);
   }
-  return Math.floor(stat);
+  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "Lightning Def"));
 }
 
-function updateDiscovery(arcane) {
-  return 100 + arcane;
+function updateDiscovery(arcane, chosenEquipment) {
+  //to do, to read, this is linear?
+  return 100 + addTalismansEffectValue(arcane, chosenEquipment, "Discovery");
 }
 
-function updateVitality(arcane, lvl) {
+function updateVitality(arcane, lvl, chosenEquipment) {
   let stat = 0
+  arcane = addTalismansEffectValue(arcane, chosenEquipment, 'Arcane');
+  lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Level');
   if (lvl >= 162) {
     stat = 160 + 20 * (((((lvl + 79 - 240) / 552))));
   } else if (lvl >= 112) {
@@ -278,8 +312,7 @@ function updateVitality(arcane, lvl) {
   } else {
     stat += arcane;
   }
-  return Math.floor(stat);
-
+  return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Vitality"));
 }
 
 export {
@@ -298,4 +331,14 @@ export {
   updateDiscovery,
   updateVitality
 }
+
+
+//possible stats: HP, FP, Stamina, Robustness, Immunity, Focus, EquipLoad, 
+//MagicRed, FireRed, LightRed, HolyRed, PhysRed
+//Vigor, Endurance, Strength, Dexterity, Mind, Inteligence, Arcane, Faith
+//useless stats: StaminaRec, HPRec, FPRec, DmgTakenInc, KickPot, 2hAP, APInc, IncDmgInc, ThrownAttack, ResIncCond, RollDmgInc, DashAtt, PrecisionShot, MagmaPot, StormPot, PoiseInc, DefInc, APStance, APIncCrit, 
+//
+//Verdigris Discus (to implement)
+//
+
 
