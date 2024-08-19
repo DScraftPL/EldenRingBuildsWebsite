@@ -1,5 +1,6 @@
 {
   "wretch": {
+    "level": 1,
     "vigor": 10,
     "mind": 10,
     "endurance": 10,
@@ -10,6 +11,7 @@
     "arcane": 10
   },
   "confessor": {
+    "level": 10,
     "vigor": 10,
     "mind": 13,
     "endurance": 10,
@@ -18,5 +20,93 @@
     "inteligence": 9,
     "faith": 14,
     "arcane": 9
+  },
+  "hero": {
+    "level": 7,
+    "vigor": 14,
+    "mind": 9,
+    "endurance": 12,
+    "strength": 16,
+    "dexterity": 9,
+    "inteligence": 7,
+    "faith": 8,
+    "arcane": 11
+  },
+  "bandit": {
+    "level": 5,
+    "vigor": 10,
+    "mind": 11,
+    "endurance": 10,
+    "strength": 9,
+    "dexterity": 13,
+    "inteligence": 9,
+    "faith": 8,
+    "arcane": 14
+  },
+  "astrologer": {
+    "level": 6,
+    "vigor": 9,
+    "mind": 15,
+    "endurance": 9,
+    "strength": 8,
+    "dexterity": 12,
+    "inteligence": 16,
+    "faith": 7,
+    "arcane": 9
+  },
+  "warrior": {
+    "level": 8,
+    "vigor": 11,
+    "mind": 12,
+    "endurance": 11,
+    "strength": 10,
+    "dexterity": 16,
+    "inteligence": 10,
+    "faith": 8,
+    "arcane": 9
+  },
+  "prisoner": {
+    "level": 9,
+    "vigor": 11,
+    "mind": 12,
+    "endurance": 11,
+    "strength": 11,
+    "dexterity": 14,
+    "inteligence": 14,
+    "faith": 6,
+    "arcane": 9
+  },
+  "vagabond": {
+    "level": 9,
+    "vigor": 15,
+    "mind": 10,
+    "endurance": 11,
+    "strength": 14,
+    "dexterity": 13,
+    "inteligence": 9,
+    "faith": 9,
+    "arcane": 7
+  },
+  "prophet": {
+    "level": 7,
+    "vigor": 10,
+    "mind": 14,
+    "endurance": 8,
+    "strength": 11,
+    "dexterity": 10,
+    "inteligence": 7,
+    "faith": 16,
+    "arcane": 10
+  },
+  "samurai": {
+    "level": 9,
+    "vigor": 12,
+    "mind": 11,
+    "endurance": 13,
+    "strength": 12,
+    "dexterity": 15,
+    "inteligence": 9,
+    "faith": 8,
+    "arcane": 8
   }
 }
