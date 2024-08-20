@@ -12,7 +12,8 @@ import {
   updateLightningDef,
   updateHolyDef,
   updateDiscovery,
-  updateVitality
+  updateVitality,
+  updateNegation
 } from "./updateStats";
 
 function GameplayStat({ id, update }) {
@@ -47,10 +48,23 @@ function GameplayStats({ playerStats, chosenEquipment }) {
       </div>
       <div id="defensiveStats" className="border-black border-2 m-2 p-2">
         <GameplayStat id="Physical Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Strike Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Slash Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Pierce Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Magic Defense" update={updateMagicDef(playerStats.inteligence, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Fire Defense" update={updateFireDef(playerStats.vigor, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Lightning Defense" update={updateLightningDef(playerStats.level, chosenEquipment)} />
         <GameplayStat id="Holy Defense" update={updateHolyDef(playerStats.arcane, playerStats.level, chosenEquipment)} />
+      </div>
+      <div id="negationStats" className="border-black border-2 m-2 p-2">
+        <GameplayStat id="Physical Negation" update={updateNegation('PhysRed', chosenEquipment, '')} />
+        <GameplayStat id="Strike Negation" update={updateNegation('PhysRed', chosenEquipment, 'StrikeRed')} />
+        <GameplayStat id="Slash Negation" update={updateNegation('PhysRed', chosenEquipment, 'SlashRed')} />
+        <GameplayStat id="Pierce Negation" update={updateNegation('PhysRed', chosenEquipment, 'PierceRed')} />
+        <GameplayStat id="Magic Negation" update={updateNegation('MagicRed', chosenEquipment, '')} />
+        <GameplayStat id="Fire Negation" update={updateNegation('FireRed', chosenEquipment, '')} />
+        <GameplayStat id="Lightning Negation" update={updateNegation('LightRed', chosenEquipment, '')} />
+        <GameplayStat id="Holy Negation" update={updateNegation('HolyRed', chosenEquipment, '')} />
       </div>
     </div>
   )

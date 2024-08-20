@@ -10,10 +10,12 @@ function Planner() {
   const [playerStats, setPlayerStats] = useState(classes.wretch);
   const [chosenClass, setChosenClass] = useState('wretch');
   const [chosenEquipment, setChosenEquipment] = useState({
-    head: 'none',
-    chest: 'none',
-    hands: 'none',
-    legs: 'none',
+    armor: {
+      head: 'none',
+      chest: 'none',
+      hands: 'none',
+      legs: 'none'
+    },
     talismans: {
       talisman1: "None",
       talisman2: "None",

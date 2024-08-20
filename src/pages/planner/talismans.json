@@ -209,91 +209,91 @@
     "description": "Reduces Magic Damage taken by 13%.",
     "weight": 0.6,
     "statType": "MagicRed",
-    "statValue": 0.87,
+    "statValue": 0.13,
     "multiple": false
   },
   "Spelldrake Talisman +1": {
     "description": "Reduces Magic Damage taken by 17%.",
     "weight": 0.6,
     "statType": "MagicRed",
-    "statValue": 0.83,
+    "statValue": 0.13,
     "multiple": false
   },
   "Spelldrake Talisman +2": {
     "description": "Reduces Magic Damage taken by 20%.",
     "weight": 0.6,
     "statType": "MagicRed",
-    "statValue": 0.80,
+    "statValue": 0.20,
     "multiple": false
   },
   "Spelldrake Talisman +3": {
     "description": "Reduces Magic Damage taken by 22%.",
     "weight": 0.9,
     "statType": "MagicRed",
-    "statValue": 0.78,
+    "statValue": 0.22,
     "multiple": false
   },
   "Flamedrake Talisman": {
     "description": "Reduces Fire Damage taken by 13%",
     "weight": 0.6,
     "statType": "FireRed",
-    "statValue": 0.87,
+    "statValue": 0.13,
     "multiple": false
   },
   "Flamedrake Talisman +1": {
     "description": "Reduces Fire Damage taken by 17%",
     "weight": 0.6,
     "statType": "FireRed",
-    "statValue": 0.83,
+    "statValue": 0.17,
     "multiple": false
   },
   "Flamedrake Talisman +2": {
     "description": "Reduces Fire Damage taken by 20%",
     "weight": 0.6,
     "statType": "FireRed",
-    "statValue": 0.80,
+    "statValue": 0.20,
     "multiple": false
   },
   "Flamedrake Talisman +3": {
     "description": "Reduces Fire Damage taken by 22%",
     "weight": 0.9,
     "statType": "FireRed",
-    "statValue": 0.78,
+    "statValue": 0.22,
     "multiple": false
   },
   "Boltdrake Talisman": {
     "description": "Boosts Lightning Damage negation by 13%",
     "weight": 0.6,
     "statType": "LightRed",
-    "statValue": 0.87,
+    "statValue": 0.13,
     "multiple": false
   },
   "Boltdrake Talisman +1": {
     "description": "Boosts Lightning Damage negation by 17%",
     "weight": 0.6,
     "statType": "LightRed",
-    "statValue": 0.83,
+    "statValue": 0.17,
     "multiple": false
   },
   "Boltdrake Talisman +2": {
     "description": "Boosts Lightning Damage negation by 20%",
     "weight": 0.6,
     "statType": "LightRed",
-    "statValue": 0.80,
+    "statValue": 0.20,
     "multiple": false
   },
   "Boltdrake Talisman +3": {
     "description": "Boosts Lightning Damage negation by 22%",
     "weight": 0.9,
     "statType": "LightRed",
-    "statValue": 0.78,
+    "statValue": 0.22,
     "multiple": false
   },
   "Golden Braid": {
     "description": "Boosts holy damage negation by 22%",
     "weight": 0.9,
     "statType": "HolyRed",
-    "statValue": 0.78,
+    "statValue": 0.22,
     "multiple": false
   },
   "Pearldrake Talisman": {
@@ -305,7 +305,12 @@
       "FireRed",
       "HolyRed"
     ],
-    "statValue": 0.95,
+    "statValue": [
+      0.05,
+      0.05,
+      0.05,
+      0.05
+    ],
     "multiple": true
   },
   "Pearldrake Talisman +1": {
@@ -317,7 +322,12 @@
       "FireRed",
       "HolyRed"
     ],
-    "statValue": 0.93,
+    "statValue": [
+      0.07,
+      0.07,
+      0.07,
+      0.07
+    ],
     "multiple": true
   },
   "Pearldrake Talisman +2": {
@@ -329,7 +339,12 @@
       "FireRed",
       "HolyRed"
     ],
-    "statValue": 0.91,
+    "statValue": [
+      0.09,
+      0.09,
+      0.09,
+      0.09
+    ],
     "multiple": true
   },
   "Pearldrake Talisman +3": {
@@ -341,7 +356,12 @@
       "FireRed",
       "HolyRed"
     ],
-    "statValue": 0.89,
+    "statValue": [
+      0.11,
+      0.11,
+      0.11,
+      0.11
+    ],
     "multiple": true
   },
   "Crimson Seed Talisman": {
@@ -733,49 +753,49 @@
     "description": "Reduces Physical Damage taken by 10%",
     "weight": 0.8,
     "statType": "PhysRed",
-    "statValue": 0.90,
+    "statValue": 0.10,
     "multiple": false
   },
   "Dragoncrest Shield Talisman +1": {
     "description": "Reduces Physical Damage taken by 13%",
     "weight": 0.8,
     "statType": "PhysRed",
-    "statValue": 0.87,
+    "statValue": 0.13,
     "multiple": false
   },
   "Dragoncrest Shield Talisman +2": {
     "description": "Reduces Physical Damage taken by 17%",
     "weight": 0.8,
     "statType": "PhysRed",
-    "statValue": 0.83,
+    "statValue": 0.17,
     "multiple": false
   },
   "Dragoncrest Greatshield Talisman": {
     "description": "Reduces Physical Damage taken by 20%.",
     "weight": 0.8,
     "statType": "PhysRed",
-    "statValue": 0.80,
+    "statValue": 0.20,
     "multiple": false
   },
   "Haligdrake Talisman": {
     "description": "Reduces Holy Damage taken by 13%",
     "weight": 0.6,
     "statType": "HolyRed",
-    "statValue": 0.87,
+    "statValue": 0.13,
     "multiple": false
   },
   "Haligdrake Talisman +1": {
     "description": "Reduces Holy Damage taken by 17%",
     "weight": 0.6,
     "statType": "HolyRed",
-    "statValue": 0.83,
+    "statValue": 0.17,
     "multiple": false
   },
   "Haligdrake Talisman +2": {
     "description": "Reduces Holy Damage taken by 20%",
     "weight": 0.6,
     "statType": "HolyRed",
-    "statValue": 0.80,
+    "statValue": 0.20,
     "multiple": false
   },
   "Prince of Death's Pustule": {

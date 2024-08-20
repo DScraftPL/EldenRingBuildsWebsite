@@ -35,6 +35,10 @@ function addTalismansEffectValue(statVal, chosenEquipment, stat) {
   return statVal;
 }
 
+function addArmorPieceValue(piece, chosenEquipment, stat) {
+  return 0;
+}
+
 function updateHP(lvl, chosenEquipment) {
   let stat = 0;
   lvl = addTalismansEffectValue(lvl, chosenEquipment, "Vigor");
@@ -315,6 +319,23 @@ function updateVitality(arcane, lvl, chosenEquipment) {
   return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Vitality"));
 }
 
+function updateNegation(stat, chosenEquipment, stat2) {
+  let talismanValue = 1.00 - addTalismansEffectValue(0, chosenEquipment, stat);
+  let tempStat = stat2;
+  if (stat2 === '') {
+    tempStat = stat;
+  }
+
+  //physical != strike, talisman gives this but armor gives physical and strike, on armor they are separate
+  let headValue = 1.00 - addArmorPieceValue("head", chosenEquipment, tempStat);
+  let chestValue = 1.00 - addArmorPieceValue("chest", chosenEquipment, tempStat);
+  let handsValue = 1.00 - addArmorPieceValue("hands", chosenEquipment, tempStat);
+  let legsValue = 1.00 - addArmorPieceValue("legs", chosenEquipment, tempStat);
+
+  //negative Radagon Scarseal for example, 
+  return 1.00 - (talismanValue * headValue * chestValue * handsValue * legsValue);
+}
+
 export {
   updateHP,
   updateFP,
@@ -329,7 +350,8 @@ export {
   updateLightningDef,
   updateHolyDef,
   updateDiscovery,
-  updateVitality
+  updateVitality,
+  updateNegation
 }
 
 
