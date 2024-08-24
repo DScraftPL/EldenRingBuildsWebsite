@@ -1,4 +1,8 @@
-import allTalismans from './talismans.json'
+import allTalismans from '../../data/talismans.json'
+import allHeads from '../../data/head.json'
+import allChests from '../../data/chest.json'
+import allHands from '../../data/hands.json'
+import allLegs from '../../data/legs.json'
 
 //stat='Level' for artifitial level 
 function applyTalismansEffectValue(statVal, chosenEquipment, stat) {
@@ -36,7 +40,25 @@ function addTalismansEffectValue(statVal, chosenEquipment, stat) {
 }
 
 function addArmorPieceValue(piece, chosenEquipment, stat) {
-  return 0;
+  var value = 0;
+  switch (piece) {
+    case 'head':
+      value = parseFloat(allHeads[chosenEquipment.armor['head']][stat])
+      break;
+    case 'chest':
+      value = parseFloat(allChests[chosenEquipment.armor['chest']][stat])
+      break;
+    case 'hands':
+      value = parseFloat(allHands[chosenEquipment.armor['hands']][stat])
+      break;
+    case 'legs':
+      value = parseFloat(allLegs[chosenEquipment.armor['legs']][stat])
+      break;
+    default:
+      console.log("wtf")
+      break;
+  }
+  return value;
 }
 
 function updateHP(lvl, chosenEquipment) {
@@ -74,22 +96,20 @@ function updateStamina(lvl, chosenEquipment) {
   lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Endurance');
   if (lvl >= 61) {
     stat = 155 + 15 * (((((lvl - 50) / 49))));
-  } else if (lvl >= 36) {
+  } else if (lvl >= 30) {
     stat = 130 + 25 * (((((lvl - 30) / 20))));
   } else if (lvl >= 16) {
     stat = 105 + 25 * (((((lvl - 15) / 15))));
   } else {
     stat = 80 + 25 * (((((lvl - 1) / 14))));
   }
-  return Math.floor(applyTalismansEffectValue(stat, chosenEquipment, "Stamina"));
+  return Math.floor(applyTalismansEffectValue(Math.floor(stat), chosenEquipment, "Stamina"));
 }
 
 function updateImmunity(vigor, level, chosenEquipment) {
   let stat = 0
-  console.log(vigor);
   vigor = addTalismansEffectValue(vigor, chosenEquipment, 'Vigor');
   level = addTalismansEffectValue(level, chosenEquipment, 'Level');
-  console.log(vigor);
   if (level >= 162) {
     stat = 160 + 20 * (((((level + 79 - 240) / 552))));
   } else if (level >= 112) {

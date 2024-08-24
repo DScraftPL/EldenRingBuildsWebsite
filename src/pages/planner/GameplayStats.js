@@ -21,6 +21,7 @@ function GameplayStat({ id, update }) {
     <label htmlFor={id}>{id} </label>
     <input
       id={id}
+      className="w-16"
       value={parseFloat(update)}
       type="number"
       step="any"

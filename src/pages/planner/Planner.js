@@ -3,18 +3,17 @@ import { useState } from 'react'
 import PlayerStats from './PlayerStats.js'
 import GameplayStats from './GameplayStats.js'
 import Equipment from './Equipment.js'
-import classes from './classes.json'
-//import talismans from './talismans.json'
+import classes from '../../data/classes.json'
 
 function Planner() {
   const [playerStats, setPlayerStats] = useState(classes.wretch);
   const [chosenClass, setChosenClass] = useState('wretch');
   const [chosenEquipment, setChosenEquipment] = useState({
     armor: {
-      head: 'none',
-      chest: 'none',
-      hands: 'none',
-      legs: 'none'
+      head: 'None',
+      chest: 'None',
+      hands: 'None',
+      legs: 'None'
     },
     talismans: {
       talisman1: "None",
@@ -48,13 +47,18 @@ function Planner() {
   }
 
   const updateChosenClass = (e) => {
-    console.log(e.target.value);
     setChosenClass(e.target.value);
     setPlayerStats(classes[e.target.value]);
   }
 
-  const updateChosenArmor = (slot, newValue) => {
-    setChosenEquipment(chosenEquipment[slot] = newValue);
+  const updateChosenArmor = (e, slot) => {
+    setChosenEquipment((prevEquipment) => ({
+      ...prevEquipment,
+      armor: {
+        ...prevEquipment.armor,
+        [slot]: e.target.value
+      }
+    }));
   }
 
   const updateChosenTalisman = (e, slot) => {
@@ -97,7 +101,7 @@ function Planner() {
         <option value="samurai">samurai</option>
       </select>
       <GameplayStats playerStats={playerStats} chosenEquipment={chosenEquipment} />
-      <Equipment chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
+      <Equipment chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} updateChosenArmor={updateChosenArmor} />
     </div>
   )
 }
