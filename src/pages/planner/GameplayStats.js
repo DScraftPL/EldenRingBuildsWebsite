@@ -6,6 +6,8 @@ import {
   updateFocus,
   updateRobustness,
   updateEquipLoad,
+  updateMaxEquipLoad,
+  updateRollType,
   updatePhysicalDef,
   updateMagicDef,
   updateFireDef,
@@ -13,7 +15,8 @@ import {
   updateHolyDef,
   updateDiscovery,
   updateVitality,
-  updateNegation
+  updateNegation,
+  updatePoise
 } from "./updateStats";
 
 function GameplayStat({ id, update }) {
@@ -23,13 +26,26 @@ function GameplayStat({ id, update }) {
       id={id}
       className="w-16"
       value={parseFloat(update)}
-      type="number"
+      type="text"
       step="any"
       readOnly
     />
   </div>)
 }
 
+function RollStat({ id, update }) {
+  return (<div>
+    <label htmlFor={id}>{id} </label>
+    <input
+      id={id}
+      className="w-16"
+      value={update}
+      type="text"
+      step="any"
+      readOnly
+    />
+  </div>)
+}
 function GameplayStats({ playerStats, chosenEquipment }) {
 
   return (
@@ -38,7 +54,10 @@ function GameplayStats({ playerStats, chosenEquipment }) {
         <GameplayStat id="HP" update={updateHP(playerStats.vigor, chosenEquipment)} />
         <GameplayStat id="FP" update={updateFP(playerStats.mind, chosenEquipment)} />
         <GameplayStat id="Stamina" update={updateStamina(playerStats.endurance, chosenEquipment)} />
-        <GameplayStat id="Max Equip Load" update={updateEquipLoad(playerStats.endurance, chosenEquipment)} />
+        <GameplayStat id="Equip Load" update={updateEquipLoad(chosenEquipment)} />
+        <GameplayStat id="Max Equip Load" update={updateMaxEquipLoad(playerStats.endurance, chosenEquipment)} />
+        <RollStat id="Roll Type" update={updateRollType(playerStats.endurance, chosenEquipment)} />
+        <GameplayStat id="Poise" update={updatePoise(chosenEquipment)} />
       </div>
       <div id="secondaryStats" className="border-black border-2 m-2 p-2">
         <GameplayStat id="Immunity" update={updateImmunity(playerStats.vigor, playerStats.level, chosenEquipment)} />

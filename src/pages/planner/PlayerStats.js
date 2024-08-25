@@ -23,7 +23,7 @@ function PlayerStat({ id, stat, onChange, classStat }) {
 function PlayerStats({ playerStats, onChange, classStat }) {
 
   return (
-    <div>
+    <div className="border-black border-2 m-2 p-2">
       <p>level: {playerStats.level}</p>
       <PlayerStat id='vigor' stat={playerStats.vigor} onChange={onChange} classStat={classStat.vigor} />
       <PlayerStat id='mind' stat={playerStats.mind} onChange={onChange} classStat={classStat.mind} />

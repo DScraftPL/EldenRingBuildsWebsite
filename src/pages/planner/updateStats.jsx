@@ -61,6 +61,13 @@ function addArmorPieceValue(piece, chosenEquipment, stat) {
   return value;
 }
 
+function addArmorStat(chosenEquipment, stat) {
+  let value = 0;
+  const eq = chosenEquipment.armor
+  value += allHeads[eq.head][stat] + allChests[eq.chest][stat] + allHands[eq.hands][stat] + allLegs[eq.legs][stat];
+  return value;
+}
+
 function updateHP(lvl, chosenEquipment) {
   let stat = 0;
   lvl = addTalismansEffectValue(lvl, chosenEquipment, "Vigor");
@@ -128,6 +135,7 @@ function updateImmunity(vigor, level, chosenEquipment) {
   } else {
     stat += 0;
   }
+  stat += addArmorStat(chosenEquipment, "Immunity");
   return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Immunity"));
 }
 
@@ -153,6 +161,7 @@ function updateFocus(mind, level, chosenEquipment) {
   } else {
     stat += 0;
   }
+  stat += addArmorStat(chosenEquipment, "Focus");
   return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Focus"));
 }
 
@@ -178,10 +187,21 @@ function updateRobustness(endurance, level, chosenEquipment) {
   } else {
     stat += 0;
   }
+  stat += addArmorStat(chosenEquipment, "Robustness");
   return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Robustness"));
 }
 
-function updateEquipLoad(lvl, chosenEquipment) {
+function updateEquipLoad(chosenEquipment) {
+  let stat = 0;
+  stat += addArmorStat(chosenEquipment, "Weight");
+  const chosenTalismans = Object.values(chosenEquipment.talismans);
+  chosenTalismans.forEach(talisman => {
+    stat += allTalismans[talisman].weight
+  });
+  return Math.round(10 * stat) / 10;
+}
+
+function updateMaxEquipLoad(lvl, chosenEquipment) {
   let stat = 0;
   lvl = addTalismansEffectValue(lvl, chosenEquipment, 'Endurance');
   if (lvl >= 61) {
@@ -192,6 +212,19 @@ function updateEquipLoad(lvl, chosenEquipment) {
     stat = ((45 + 27 * (((((lvl - 8) / 17))))));
   }
   return Math.round(10 * applyTalismansEffectValue(stat, chosenEquipment, "EquipLoad")) / 10;
+}
+
+function updateRollType(endurance, chosenEquipment) {
+  const ratio = updateEquipLoad(chosenEquipment) / updateMaxEquipLoad(endurance, chosenEquipment);
+  if (ratio > 1) {
+    return "overloaded";
+  } else if (ratio > 0.7) {
+    return "heavy load";
+  } else if (ratio > 0.3) {
+    return "medium load";
+  } else {
+    return "light load";
+  }
 }
 
 function updatePhysicalDef(strength, lvl, chosenEquipment) {
@@ -336,6 +369,7 @@ function updateVitality(arcane, lvl, chosenEquipment) {
   } else {
     stat += arcane;
   }
+  stat += addArmorStat(chosenEquipment, "Vitality");
   return Math.floor(addTalismansEffectValue(stat, chosenEquipment, "Vitality"));
 }
 
@@ -345,15 +379,32 @@ function updateNegation(stat, chosenEquipment, stat2) {
   if (stat2 === '') {
     tempStat = stat;
   }
+  //this is stupid
+  //this is stupid
   let debuff = (addTalismansEffectValue(0, chosenEquipment, 'DmgTakenInc'));
-
+  if (debuff === 0) {
+    debuff = 1
+  }
   //physical != strike, talisman gives this but armor gives physical and strike, on armor they are separate
   let headValue = (1.00 - addArmorPieceValue("head", chosenEquipment, tempStat) / 100);
   let chestValue = (1.00 - addArmorPieceValue("chest", chosenEquipment, tempStat) / 100);
   let handsValue = (1.00 - addArmorPieceValue("hands", chosenEquipment, tempStat) / 100);
   let legsValue = (1.00 - addArmorPieceValue("legs", chosenEquipment, tempStat) / 100);
-  console.log(talismanValue, headValue, stat, debuff)
+  //this is stupid
+  //this is stupid
+  //this is stupid
+  //this is stupid
+  //this is stupid
+  //this is stupid
+  //this is stupid
+  //this is stupid
   return Math.round((100 - (headValue * chestValue * handsValue * legsValue * talismanValue * debuff) * 100) * 1000) / 1000;
+}
+
+function updatePoise(chosenEquipment) {
+  let stat = 0;
+  stat += addArmorStat(chosenEquipment, "Poise");
+  return stat;
 }
 
 export {
@@ -364,6 +415,8 @@ export {
   updateFocus,
   updateRobustness,
   updateEquipLoad,
+  updateMaxEquipLoad,
+  updateRollType,
   updatePhysicalDef,
   updateMagicDef,
   updateFireDef,
@@ -371,7 +424,8 @@ export {
   updateHolyDef,
   updateDiscovery,
   updateVitality,
-  updateNegation
+  updateNegation,
+  updatePoise
 }
 
 
