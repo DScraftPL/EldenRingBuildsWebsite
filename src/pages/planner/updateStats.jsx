@@ -345,15 +345,15 @@ function updateNegation(stat, chosenEquipment, stat2) {
   if (stat2 === '') {
     tempStat = stat;
   }
+  let debuff = (addTalismansEffectValue(0, chosenEquipment, 'DmgTakenInc'));
 
   //physical != strike, talisman gives this but armor gives physical and strike, on armor they are separate
-  let headValue = 1.00 - addArmorPieceValue("head", chosenEquipment, tempStat);
-  let chestValue = 1.00 - addArmorPieceValue("chest", chosenEquipment, tempStat);
-  let handsValue = 1.00 - addArmorPieceValue("hands", chosenEquipment, tempStat);
-  let legsValue = 1.00 - addArmorPieceValue("legs", chosenEquipment, tempStat);
-
-  //negative Radagon Scarseal for example, 
-  return 1.00 - (talismanValue * headValue * chestValue * handsValue * legsValue);
+  let headValue = (1.00 - addArmorPieceValue("head", chosenEquipment, tempStat) / 100);
+  let chestValue = (1.00 - addArmorPieceValue("chest", chosenEquipment, tempStat) / 100);
+  let handsValue = (1.00 - addArmorPieceValue("hands", chosenEquipment, tempStat) / 100);
+  let legsValue = (1.00 - addArmorPieceValue("legs", chosenEquipment, tempStat) / 100);
+  console.log(talismanValue, headValue, stat, debuff)
+  return Math.round((100 - (headValue * chestValue * handsValue * legsValue * talismanValue * debuff) * 100) * 1000) / 1000;
 }
 
 export {

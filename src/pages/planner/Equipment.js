@@ -86,15 +86,19 @@ function TalismanSlot({ id, chosenEquipment, updateChosenTalisman }) {
 }
 
 function Equipment({ chosenEquipment, updateChosenTalisman, updateChosenArmor }) {
-  return (<div>
-    <TalismanSlot id="1" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
-    <TalismanSlot id="2" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
-    <TalismanSlot id="3" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
-    <TalismanSlot id="4" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
-    <HeadSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
-    <ChestSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
-    <HandsSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
-    <LegsSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
+  return (<div className='flex flex-row'>
+    <div className='border-black border-2 m-2 p-2'>
+      <TalismanSlot id="1" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
+      <TalismanSlot id="2" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
+      <TalismanSlot id="3" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
+      <TalismanSlot id="4" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
+    </div>
+    <div className='border-black border-2 m-2 p-2'>
+      <HeadSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
+      <ChestSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
+      <HandsSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
+      <LegsSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
+    </div>
   </div>)
 }
 
