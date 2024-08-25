@@ -86,6 +86,7 @@ function Planner() {
   return (
     <div>
       <h1>Planner</h1>
+      <h1>to do: Immunity from armor, Poise counter, Equip load counter, Roll type, Weapons</h1>
       <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
       <label htmlFor='selectClass'> Choose class: </label>
       <select id="selectClass" value={chosenClass} onChange={updateChosenClass}>
