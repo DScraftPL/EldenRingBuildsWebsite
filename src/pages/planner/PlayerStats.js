@@ -5,16 +5,21 @@ function PlayerStat({ id, stat, onChange, classStat }) {
   }
 
   return (
-    <div>
-      <label htmlFor={id}>{id}, ({classStat}): </label>
+    <div className="flex flex-row">
+      <label className="w-32" htmlFor={id}>{id}, ({classStat}): </label>
       <input
         id={id}
+        className="w-8"
         type="text"
         value={stat}
         onChange={handleChange}
       />
-      <button onClick={() => { onChange(id, stat - 1); }}>-</button>
-      <button onClick={() => { onChange(id, stat + 1); }}>+</button>
+      <button
+        className="w-4"
+        onClick={() => { onChange(id, stat - 1); }}>-</button>
+      <button
+        className="w-4"
+        onClick={() => { onChange(id, stat + 1); }}>+</button>
     </div>
   )
 
@@ -23,8 +28,8 @@ function PlayerStat({ id, stat, onChange, classStat }) {
 function PlayerStats({ playerStats, onChange, classStat }) {
 
   return (
-    <div className="border-black border-2 m-2 p-2">
-      <p>level: {playerStats.level}</p>
+    <div>
+      <h1>level: {playerStats.level}</h1>
       <PlayerStat id='vigor' stat={playerStats.vigor} onChange={onChange} classStat={classStat.vigor} />
       <PlayerStat id='mind' stat={playerStats.mind} onChange={onChange} classStat={classStat.mind} />
       <PlayerStat id='endurance' stat={playerStats.endurance} onChange={onChange} classStat={classStat.endurance} />

@@ -20,11 +20,14 @@ import {
 } from "./updateStats";
 
 function GameplayStat({ id, update }) {
-  return (<div>
-    <label htmlFor={id}>{id} </label>
+  return (<div className="flex flex-row">
+    <label
+      htmlFor={id}
+      className="w-32"
+    >{id} </label>
     <input
       id={id}
-      className="w-16"
+      className="w-8"
       value={parseFloat(update)}
       type="text"
       step="any"
@@ -34,11 +37,14 @@ function GameplayStat({ id, update }) {
 }
 
 function RollStat({ id, update }) {
-  return (<div>
-    <label htmlFor={id}>{id} </label>
+  return (<div className="flex flex-row">
+    <label
+      htmlFor={id}
+      className="w-32"
+    >{id} </label>
     <input
       id={id}
-      className="w-16"
+      className="w-20"
       value={update}
       type="text"
       step="any"
@@ -49,7 +55,7 @@ function RollStat({ id, update }) {
 function GameplayStats({ playerStats, chosenEquipment }) {
 
   return (
-    <div className="flex flex-row">
+    <div className="flex">
       <div id="primaryStats" className="border-black border-2 m-2 p-2">
         <GameplayStat id="HP" update={updateHP(playerStats.vigor, chosenEquipment)} />
         <GameplayStat id="FP" update={updateFP(playerStats.mind, chosenEquipment)} />
@@ -67,24 +73,24 @@ function GameplayStats({ playerStats, chosenEquipment }) {
         <GameplayStat id="Discovery" update={updateDiscovery(playerStats.arcane, chosenEquipment)} />
       </div>
       <div id="defensiveStats" className="border-black border-2 m-2 p-2">
-        <GameplayStat id="Physical Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Strike Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Slash Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Pierce Defense" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Magic Defense" update={updateMagicDef(playerStats.inteligence, playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Fire Defense" update={updateFireDef(playerStats.vigor, playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Lightning Defense" update={updateLightningDef(playerStats.level, chosenEquipment)} />
-        <GameplayStat id="Holy Defense" update={updateHolyDef(playerStats.arcane, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Physical Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Strike Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Slash Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Pierce Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Magic Def" update={updateMagicDef(playerStats.inteligence, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Fire Def" update={updateFireDef(playerStats.vigor, playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Lightning Def" update={updateLightningDef(playerStats.level, chosenEquipment)} />
+        <GameplayStat id="Holy Def" update={updateHolyDef(playerStats.arcane, playerStats.level, chosenEquipment)} />
       </div>
       <div id="negationStats" className="border-black border-2 m-2 p-2">
-        <GameplayStat id="Physical Negation" update={updateNegation('PhysRed', chosenEquipment, '')} />
-        <GameplayStat id="Strike Negation" update={updateNegation('PhysRed', chosenEquipment, 'StrikeRed')} />
-        <GameplayStat id="Slash Negation" update={updateNegation('PhysRed', chosenEquipment, 'SlashRed')} />
-        <GameplayStat id="Pierce Negation" update={updateNegation('PhysRed', chosenEquipment, 'PierceRed')} />
-        <GameplayStat id="Magic Negation" update={updateNegation('MagicRed', chosenEquipment, '')} />
-        <GameplayStat id="Fire Negation" update={updateNegation('FireRed', chosenEquipment, '')} />
-        <GameplayStat id="Lightning Negation" update={updateNegation('LightRed', chosenEquipment, '')} />
-        <GameplayStat id="Holy Negation" update={updateNegation('HolyRed', chosenEquipment, '')} />
+        <GameplayStat id="Physical Neg" update={updateNegation('PhysRed', chosenEquipment, '')} />
+        <GameplayStat id="Strike Neg" update={updateNegation('PhysRed', chosenEquipment, 'StrikeRed')} />
+        <GameplayStat id="Slash Neg" update={updateNegation('PhysRed', chosenEquipment, 'SlashRed')} />
+        <GameplayStat id="Pierce Neg" update={updateNegation('PhysRed', chosenEquipment, 'PierceRed')} />
+        <GameplayStat id="Magic Neg" update={updateNegation('MagicRed', chosenEquipment, '')} />
+        <GameplayStat id="Fire Neg" update={updateNegation('FireRed', chosenEquipment, '')} />
+        <GameplayStat id="Lightning Neg" update={updateNegation('LightRed', chosenEquipment, '')} />
+        <GameplayStat id="Holy Neg" update={updateNegation('HolyRed', chosenEquipment, '')} />
       </div>
     </div>
   )

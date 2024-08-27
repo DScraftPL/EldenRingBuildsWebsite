@@ -83,26 +83,33 @@ function Planner() {
     }));
   }
 
+  const classNames = Object.keys(classes);
+
   return (
-    <div>
-      <h1>Planner</h1>
-      <h1>to do: Weapons, css</h1>
-      <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
-      <label htmlFor='selectClass'> Choose class: </label>
-      <select id="selectClass" value={chosenClass} onChange={updateChosenClass}>
-        <option value="hero">hero</option>
-        <option value="bandit">bandit</option>
-        <option value="astrologer">astrologer</option>
-        <option value="warrior">warrior</option>
-        <option value="confessor">confessor</option>
-        <option value="prisoner">prisoner</option>
-        <option value="vagabond">vagabond</option>
-        <option value="wretch">wretch</option>
-        <option value="prophet">prophet</option>
-        <option value="samurai">samurai</option>
-      </select>
-      <GameplayStats playerStats={playerStats} chosenEquipment={chosenEquipment} />
-      <Equipment chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} updateChosenArmor={updateChosenArmor} />
+    <div className="">
+      <h1>DefNeg looks to be bugged Again?</h1>
+      <h1>From armor looks correct </h1>
+      <h1>Compared to tarnished.dev it looks OK?</h1>
+      <div className="flex flex-auto flex-wrap">
+        <div className="border-2 border-black m-2 p-2 outline-blue-200 outline">
+          <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
+          <label htmlFor='selectClass'> Choose class: </label>
+          <select id="selectClass" value={chosenClass} onChange={updateChosenClass}>
+            {
+              classNames.map((name) => (
+                <option key={name} value={name}>{name}</option>
+              ))
+            }
+          </select>
+        </div>
+        <GameplayStats playerStats={playerStats} chosenEquipment={chosenEquipment} />
+        <Equipment chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} updateChosenArmor={updateChosenArmor} />
+        <div className='flex flex-col m-2 p-2 border-2 border-black'>
+          <button>Save to file</button>
+          <button>Load to file</button>
+          <button>Save to localStorage</button>
+        </div>
+      </div>
     </div>
   )
 }

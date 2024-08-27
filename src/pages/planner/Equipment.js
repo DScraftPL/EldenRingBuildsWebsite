@@ -4,15 +4,19 @@ import chestData from '../../data/chest.json'
 import handsData from '../../data/hands.json'
 import legsData from '../../data/legs.json'
 
-const headNames = Object.keys(headData)
-const chestNames = Object.keys(chestData)
-const handsNames = Object.keys(handsData)
-const legsNames = Object.keys(legsData)
+
+//maybe sort and add None to the top? QoL
+const headNames = Object.keys(headData).sort()
+const chestNames = Object.keys(chestData).sort()
+const handsNames = Object.keys(handsData).sort()
+const legsNames = Object.keys(legsData).sort()
+const talismansNames = Object.keys(talismansData).sort()
 
 function HeadSlot({ chosenEquipment, updateChosenArmor }) {
   return (<div>
     <select
       id={'selectHead'}
+      className="w-72"
       onChange={(e) => updateChosenArmor(e, 'head')}
       value={chosenEquipment.armor['head']}
     >
@@ -28,6 +32,7 @@ function ChestSlot({ chosenEquipment, updateChosenArmor }) {
   return (<div>
     <select
       id={'selectChest'}
+      className="w-72"
       onChange={(e) => updateChosenArmor(e, 'chest')}
       value={chosenEquipment.armor['chest']}
     >
@@ -43,6 +48,7 @@ function HandsSlot({ chosenEquipment, updateChosenArmor }) {
   return (<div>
     <select
       id={'selectHands'}
+      className="w-72"
       onChange={(e) => updateChosenArmor(e, 'hands')}
       value={chosenEquipment.armor['hands']}
     >
@@ -58,6 +64,7 @@ function LegsSlot({ chosenEquipment, updateChosenArmor }) {
   return (<div>
     <select
       id={'selectLegs'}
+      className="w-72"
       onChange={(e) => updateChosenArmor(e, 'legs')}
       value={chosenEquipment.armor['legs']}
     >
@@ -71,7 +78,6 @@ function LegsSlot({ chosenEquipment, updateChosenArmor }) {
 }
 
 function TalismanSlot({ id, chosenEquipment, updateChosenTalisman }) {
-  const talismansNames = Object.keys(talismansData)
   return (<div>
     <select
       id={'selectTalisman' + id}
@@ -86,14 +92,14 @@ function TalismanSlot({ id, chosenEquipment, updateChosenTalisman }) {
 }
 
 function Equipment({ chosenEquipment, updateChosenTalisman, updateChosenArmor }) {
-  return (<div className='flex flex-row'>
-    <div className='border-black border-2 m-2 p-2'>
+  return (<div className='flex'>
+    <div className='border-black border-2 m-2 p-2 space-y-2'>
       <TalismanSlot id="1" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
       <TalismanSlot id="2" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
       <TalismanSlot id="3" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
       <TalismanSlot id="4" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
     </div>
-    <div className='border-black border-2 m-2 p-2'>
+    <div className='border-black border-2 m-2 p-2 space-y-2'>
       <HeadSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
       <ChestSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
       <HandsSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />

@@ -217,13 +217,13 @@ function updateMaxEquipLoad(lvl, chosenEquipment) {
 function updateRollType(endurance, chosenEquipment) {
   const ratio = updateEquipLoad(chosenEquipment) / updateMaxEquipLoad(endurance, chosenEquipment);
   if (ratio > 1) {
-    return "overloaded";
+    return "Overloaded";
   } else if (ratio > 0.7) {
-    return "heavy load";
+    return "Heavy Load";
   } else if (ratio > 0.3) {
-    return "medium load";
+    return "Medium Load";
   } else {
-    return "light load";
+    return "Light Load";
   }
 }
 

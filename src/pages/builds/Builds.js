@@ -1,6 +1,9 @@
 function Builds() {
   return (
-    <h1>Builds</h1>
+    <div>
+      <h1>Work In Progress</h1>
+      <p>to do: localstorage, saving to file, loading from file, dark mode, responsibility, QoL (None at the top)</p>
+    </div>
   )
 }
 
