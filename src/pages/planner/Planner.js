@@ -87,9 +87,6 @@ function Planner() {
 
   return (
     <div className="">
-      <h1>DefNeg looks to be bugged Again?</h1>
-      <h1>From armor looks correct </h1>
-      <h1>Compared to tarnished.dev it looks OK?</h1>
       <div className="flex flex-auto flex-wrap">
         <div className="border-2 border-black m-2 p-2 outline-blue-200 outline">
           <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
