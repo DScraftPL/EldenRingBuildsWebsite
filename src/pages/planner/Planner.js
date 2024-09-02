@@ -85,6 +85,24 @@ function Planner() {
     }));
   }
 
+  const saveToLocalStorage = () => {
+    const toSave = {
+      stats: playerStats,
+      class: chosenClass,
+      equip: chosenEquipment
+    }
+    console.log(toSave);
+    localStorage.setItem("hello", toSave)
+  }
+
+  const saveToFile = () => {
+
+  }
+
+  const loadFromFile = () => {
+
+  }
+
   const classNames = Object.keys(classes);
 
   return (
@@ -106,7 +124,7 @@ function Planner() {
         <div className='flex flex-col m-2 p-2 border-2 border-black dark:text-white dark:bg-zinc-900 dark:border-white'>
           <button>Save to file</button>
           <button>Load to file</button>
-          <button>Save to localStorage</button>
+          <button onClick={saveToLocalStorage}>Save to localStorage</button>
         </div>
       </div>
     </div>
