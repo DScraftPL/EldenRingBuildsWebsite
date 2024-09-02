@@ -9,6 +9,7 @@ body {
   font-family: "Noto sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-white dark:bg-black
 }
 
 code {

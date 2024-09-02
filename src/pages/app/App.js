@@ -8,21 +8,14 @@ import {
   Routes,
   Route
 } from "react-router-dom"
-import { useState } from 'react';
 
 function App() {
 
-  const [isDarkMode, setDarkMode] = useState(false);
-
-  const changeMode = () => {
-    setDarkMode(!isDarkMode)
-  }
-
   return (
-    <div className={isDarkMode ? "bg-white text-black" : "bg-black text-white"}>
+    <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<NavigationBar changeMode={changeMode} />}>
+          <Route path='/' element={<NavigationBar />}>
             <Route index element={<Home />} />
             <Route path="builds" element={<Builds />} />
             <Route path="planner" element={<Planner />} />
