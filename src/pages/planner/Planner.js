@@ -5,6 +5,8 @@ import GameplayStats from './GameplayStats.js'
 import Equipment from './Equipment.js'
 import classes from '../../data/classes.json'
 
+import './Planner.css'
+
 function Planner() {
   const [playerStats, setPlayerStats] = useState(classes.wretch);
   const [chosenClass, setChosenClass] = useState('wretch');
@@ -88,7 +90,7 @@ function Planner() {
   return (
     <div className="">
       <div className="flex flex-auto flex-wrap">
-        <div className="border-2 border-black m-2 p-2 outline-blue-200 outline">
+        <div className="border-2 border-black m-2 p-2 dark:border-white dark:bg-zinc-900 dark:text-white">
           <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
           <label htmlFor='selectClass'> Choose class: </label>
           <select id="selectClass" value={chosenClass} onChange={updateChosenClass}>
@@ -101,7 +103,7 @@ function Planner() {
         </div>
         <GameplayStats playerStats={playerStats} chosenEquipment={chosenEquipment} />
         <Equipment chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} updateChosenArmor={updateChosenArmor} />
-        <div className='flex flex-col m-2 p-2 border-2 border-black'>
+        <div className='flex flex-col m-2 p-2 border-2 border-black dark:text-white dark:bg-zinc-900 dark:border-white'>
           <button>Save to file</button>
           <button>Load to file</button>
           <button>Save to localStorage</button>

@@ -1,0 +1,11 @@
+input {
+  @apply bg-white dark:bg-zinc-900
+}
+
+select {
+  @apply bg-gray-50 dark:bg-zinc-900 dark:border-white border-2 hover:bg-blue-200 dark:hover:bg-blue-900
+}
+
+select option {
+  @apply bg-gray-50 dark:bg-zinc-900 dark:border-white border-2
+}

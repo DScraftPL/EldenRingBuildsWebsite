@@ -1,5 +1,7 @@
 import '../app/App.css'
 import './NavigationBar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
 
 import {
   Outlet,
@@ -24,9 +26,9 @@ function ButtonDarkMode() {
   }
 
   return (<button
-    className="text-red-500 absolute right-2 m-2"
+    className="text-yellow-500 text-lg absolute right-4 m-2"
     onClick={toggleTheme}
-  >WWW</button>)
+  ><FontAwesomeIcon icon={theme === "light" ? faSun : faMoon} /></button>)
 }
 
 //rounded taliwind css idea
@@ -36,16 +38,13 @@ function NavigationBar() {
     <div>
       <nav className="flex flex-row justify-center m-2 py-2 w-auto border-2 
         bg-white border-black
-        dark:bg-black dark:border-white">
+        dark:bg-zinc-900 dark:border-white">
         <ul className='flex flex-row relative space-x-16 text-lg'>
           <li
-            className='border-black dark:border-white dark:text-white border-2 p-1 hover:bg-blue-200'
           ><Link to="/">Home</Link></li>
           <li
-            className='border-black dark:border-white dark:text-white border-2 p-1 hover:bg-blue-200'
           ><Link to="/builds">Builds</Link></li>
           <li
-            className='border-black dark:border-white dark:text-white border-2 p-1 hover:bg-blue-200'
           ><Link to="/planner" >Planner</Link></li>
         </ul>
         <ButtonDarkMode />

@@ -4,7 +4,6 @@ import chestData from '../../data/chest.json'
 import handsData from '../../data/hands.json'
 import legsData from '../../data/legs.json'
 
-
 //maybe sort and add None to the top? QoL
 const headNames = Object.keys(headData).sort()
 const chestNames = Object.keys(chestData).sort()
@@ -93,13 +92,13 @@ function TalismanSlot({ id, chosenEquipment, updateChosenTalisman }) {
 
 function Equipment({ chosenEquipment, updateChosenTalisman, updateChosenArmor }) {
   return (<div className='flex'>
-    <div className='border-black border-2 m-2 p-2 space-y-2'>
+    <div className='border-black border-2 m-2 p-2 space-y-2 dark:border-white dark:bg-zinc-900 dark:text-white'>
       <TalismanSlot id="1" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
       <TalismanSlot id="2" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
       <TalismanSlot id="3" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
       <TalismanSlot id="4" chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} />
     </div>
-    <div className='border-black border-2 m-2 p-2 space-y-2'>
+    <div className='border-black border-2 m-2 p-2 space-y-2 dark:border-white dark:bg-zinc-900 dark:text-white'>
       <HeadSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
       <ChestSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
       <HandsSlot chosenEquipment={chosenEquipment} updateChosenArmor={updateChosenArmor} />
