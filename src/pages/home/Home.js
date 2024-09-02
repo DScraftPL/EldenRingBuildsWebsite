@@ -6,9 +6,7 @@ function Home() {
       <p>Welcome Champions</p>
       <h1>Work In Progress</h1>
       <p>to do: localstorage, saving to file, loading from file, responsibility, QoL (None at the top)</p>
-      <p>dark mode button has absolute ?</p>
-      <p>dark mode fixes, borders to apply correctly, it looks goofy, change icon</p>
-      <p>i think it does not change whole background ? to investigate it more ! </p>
+      <p>future me, please be better at colors!</p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum congue laoreet. Vestibulum quis enim blandit, fermentum enim ac, pellentesque purus. Proin in tellus vitae sapien egestas faucibus sed eu ipsum. Cras sem nisi, ullamcorper at odio ut, consequat egestas lacus. Curabitur convallis lacinia ipsum, sed aliquet lacus mattis et. Phasellus aliquam ullamcorper ultricies. In fermentum, lorem vel pellentesque volutpat, nunc massa dignissim mauris, et volutpat metus eros auctor lorem. Morbi vulputate tincidunt sapien, sed commodo diam congue ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis nec elementum magna.
         Nullam ut faucibus nunc. Sed tempus velit in eleifend dignissim. Maecenas congue bibendum dui sit amet mattis. Vestibulum semper quam tellus, ut luctus lorem ullamcorper eget. Morbi maximus elit id dictum tempor. Pellentesque pretium est lectus, id interdum est ultrices eu. Vivamus magna ex, tincidunt nec tortor pulvinar, mattis ultricies nibh. Proin efficitur viverra venenatis. Maecenas vitae varius quam. Integer efficitur feugiat dignissim. In imperdiet enim nec ultricies sollicitudin.
