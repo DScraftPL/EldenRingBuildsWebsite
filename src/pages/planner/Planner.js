@@ -11,8 +11,8 @@ function Planner() {
   const [playerStats, setPlayerStats] = useState(classes.wretch);
   const [chosenClass, setChosenClass] = useState('wretch');
   const [buildName, setBuildName] = useState("");
-  const [spanEmptyStatus, setEmptyStatus] = useState("false");
-  const [spanNameStatus, setNameStatus] = useState("false");
+  const [spanEmptyStatus, setEmptyStatus] = useState(false);
+  const [spanNameStatus, setNameStatus] = useState(false);
   const [chosenEquipment, setChosenEquipment] = useState({
     armor: {
       head: 'None',
@@ -101,10 +101,12 @@ function Planner() {
     console.log(toSave);
     if (buildName === "") {
       setEmptyStatus(true);
+      setNameStatus(false);
       return;
     }
     if (localStorage.getItem(buildName) !== null) {
       setNameStatus(true);
+      setEmptyStatus(false);
       return;
     }
     setNameStatus(false);
@@ -114,19 +116,11 @@ function Planner() {
     localStorage.setItem(buildName, JSON.stringify(toSave));
   }
 
-  const saveToFile = () => {
-
-  }
-
-  const loadFromFile = () => {
-
-  }
-
   const classNames = Object.keys(classes);
 
   return (
-    <div className="">
-      <div className="flex flex-auto flex-wrap">
+    <div className='h-full'>
+      <div className="flex flex-wrap justify-center border-2 border-black dark:border-white m-2 p-2 h-full">
         <div className="border-2 border-black m-2 p-2 dark:border-white dark:bg-zinc-900 dark:text-white">
           <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
           <label htmlFor='selectClass'> Choose class: </label>
@@ -144,8 +138,8 @@ function Planner() {
           <button>Save to file</button>
           <button>Load to file</button>
           <label htmlFor="buildName">name of build:</label><input id="buildName" className="text-center" onChange={updateBuildName} value={buildName} />
-          <span className={spanNameStatus ? "visible" : "invisible"}>Name already exists</span>
-          <span className={spanEmptyStatus ? "visible" : "invisible"}>Name cannot be empty </span>
+          <span className={spanNameStatus ? "block text-red-600" : "hidden"}>Name already exists</span>
+          <span className={spanEmptyStatus ? "block text-red-600" : "hidden"}>Name cannot be empty </span>
           <button onClick={saveToLocalStorage}>Save to localStorage</button>
         </div>
       </div>

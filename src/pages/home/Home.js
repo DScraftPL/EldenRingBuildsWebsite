@@ -7,7 +7,16 @@ function Home() {
       <h1>Work In Progress</h1>
       <p>to do: localstorage, saving to file, loading from file, responsibility, QoL (None at the top)</p>
       <p>future me, please be better at colors!</p>
-      <p>localStorage saves, wanted to do info spans, shit went wrong, need to fix this</p>
+      <p>localstorage saves and reads, but not everything. Now I need to: </p>
+      <ol>
+        <li>delete button</li>
+        <li>modify button (can be weird)</li>
+        <li>add notifications ("saved to storage, or loaded from storage")</li>
+        <li>name of build</li>
+        <li>optional description</li>
+      </ol>
+      <p>margin between nav and outlet</p>
+      <p>make so outlet fits rest of the screen edit: this fucking retarded, i will just add omega footer</p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum congue laoreet. Vestibulum quis enim blandit, fermentum enim ac, pellentesque purus. Proin in tellus vitae sapien egestas faucibus sed eu ipsum. Cras sem nisi, ullamcorper at odio ut, consequat egestas lacus. Curabitur convallis lacinia ipsum, sed aliquet lacus mattis et. Phasellus aliquam ullamcorper ultricies. In fermentum, lorem vel pellentesque volutpat, nunc massa dignissim mauris, et volutpat metus eros auctor lorem. Morbi vulputate tincidunt sapien, sed commodo diam congue ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis nec elementum magna.
         Nullam ut faucibus nunc. Sed tempus velit in eleifend dignissim. Maecenas congue bibendum dui sit amet mattis. Vestibulum semper quam tellus, ut luctus lorem ullamcorper eget. Morbi maximus elit id dictum tempor. Pellentesque pretium est lectus, id interdum est ultrices eu. Vivamus magna ex, tincidunt nec tortor pulvinar, mattis ultricies nibh. Proin efficitur viverra venenatis. Maecenas vitae varius quam. Integer efficitur feugiat dignissim. In imperdiet enim nec ultricies sollicitudin.

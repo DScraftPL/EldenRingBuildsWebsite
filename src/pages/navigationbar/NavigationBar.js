@@ -35,8 +35,8 @@ function ButtonDarkMode() {
 //jakos lepiej ten button zrobic
 function NavigationBar() {
   return (
-    <div>
-      <nav className="flex flex-row justify-center m-2 py-2 w-auto border-2 
+    <div className='flex flex-col h-full border-2 border-red-900'>
+      <nav className="flex flex-row justify-center mt-2 mx-2 mb-1 p-2 border-2 
         bg-white border-black
         dark:bg-zinc-900 dark:border-white">
         <ul className='flex flex-row relative space-x-16 text-lg'>
@@ -49,7 +49,9 @@ function NavigationBar() {
         </ul>
         <ButtonDarkMode />
       </nav>
-      <Outlet />
+      <div className='flex-grow'>
+        <Outlet />
+      </div>
     </div>
   )
 }
