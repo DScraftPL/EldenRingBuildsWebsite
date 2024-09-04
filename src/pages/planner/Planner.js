@@ -10,6 +10,9 @@ import './Planner.css'
 function Planner() {
   const [playerStats, setPlayerStats] = useState(classes.wretch);
   const [chosenClass, setChosenClass] = useState('wretch');
+  const [buildName, setBuildName] = useState("");
+  const [spanEmptyStatus, setEmptyStatus] = useState("false");
+  const [spanNameStatus, setNameStatus] = useState("false");
   const [chosenEquipment, setChosenEquipment] = useState({
     armor: {
       head: 'None',
@@ -85,6 +88,10 @@ function Planner() {
     }));
   }
 
+  const updateBuildName = (e) => {
+    setBuildName(e.target.value);
+  }
+
   const saveToLocalStorage = () => {
     const toSave = {
       stats: playerStats,
@@ -92,7 +99,19 @@ function Planner() {
       equip: chosenEquipment
     }
     console.log(toSave);
-    localStorage.setItem("hello", toSave)
+    if (buildName === "") {
+      setEmptyStatus(true);
+      return;
+    }
+    if (localStorage.getItem(buildName) !== null) {
+      setNameStatus(true);
+      return;
+    }
+    setNameStatus(false);
+    setEmptyStatus(false);
+    console.log(spanNameStatus);
+    console.log(spanEmptyStatus);
+    localStorage.setItem(buildName, JSON.stringify(toSave));
   }
 
   const saveToFile = () => {
@@ -121,9 +140,12 @@ function Planner() {
         </div>
         <GameplayStats playerStats={playerStats} chosenEquipment={chosenEquipment} />
         <Equipment chosenEquipment={chosenEquipment} updateChosenTalisman={updateChosenTalisman} updateChosenArmor={updateChosenArmor} />
-        <div className='flex flex-col m-2 p-2 border-2 border-black dark:text-white dark:bg-zinc-900 dark:border-white'>
+        <div className='flex flex-col items-center m-2 p-2 border-2 border-black dark:text-white dark:bg-zinc-900 dark:border-white'>
           <button>Save to file</button>
           <button>Load to file</button>
+          <label htmlFor="buildName">name of build:</label><input id="buildName" className="text-center" onChange={updateBuildName} value={buildName} />
+          <span className={spanNameStatus ? "visible" : "invisible"}>Name already exists</span>
+          <span className={spanEmptyStatus ? "visible" : "invisible"}>Name cannot be empty </span>
           <button onClick={saveToLocalStorage}>Save to localStorage</button>
         </div>
       </div>
@@ -132,3 +154,16 @@ function Planner() {
 }
 
 export default Planner;
+    /*
+let numberToSave = 0;
+let found = false
+for (let missingNumber = 0; missingNumber < localStorage.length; missingNumber++) {
+if (localStorage.getItem(missingNumber) === null) {
+found = true;
+numberToSave = missingNumber;
+break;
+}
+}
+if (!found) {
+numberToSave = localStorage.length;
+} */
