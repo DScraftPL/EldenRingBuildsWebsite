@@ -8,11 +8,12 @@ function Home() {
       <p>to do: localstorage, saving to file, loading from file, responsibility, QoL (None at the top)</p>
       <p>future me, please be better at colors!</p>
       <p>localstorage saves and reads, but not everything. Now I need to: </p>
+      <p>Save current state to sessionStorage (and load from there)</p>
       <ol>
-        <li>delete button</li>
-        <li>modify button (can be weird)</li>
+        <li>delete button HOLY FUCK IT WORKS!!!!!</li>
+        <li>modify button HOLY FUCK IT WORKS!!!!!</li>
         <li>add notifications ("saved to storage, or loaded from storage")</li>
-        <li>name of build</li>
+        <li>name of build W!</li>
         <li>optional description</li>
       </ol>
       <p>margin between nav and outlet</p>

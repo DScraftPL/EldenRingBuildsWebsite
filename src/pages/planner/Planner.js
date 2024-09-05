@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import PlayerStats from './PlayerStats.js'
 import GameplayStats from './GameplayStats.js'
@@ -8,12 +9,13 @@ import classes from '../../data/classes.json'
 import './Planner.css'
 
 function Planner() {
-  const [playerStats, setPlayerStats] = useState(classes.wretch);
-  const [chosenClass, setChosenClass] = useState('wretch');
-  const [buildName, setBuildName] = useState("");
-  const [spanEmptyStatus, setEmptyStatus] = useState(false);
-  const [spanNameStatus, setNameStatus] = useState(false);
-  const [chosenEquipment, setChosenEquipment] = useState({
+
+  const location = useLocation();
+
+  //love this
+  const stateStats = location.state?.stats || classes.wretch;
+  const stateClass = location.state?.class || "wretch";
+  const stateEquip = location.state?.equip || {
     armor: {
       head: 'None',
       chest: 'None',
@@ -26,7 +28,14 @@ function Planner() {
       talisman3: "None",
       talisman4: "None"
     }
-  });
+  }
+
+  const [playerStats, setPlayerStats] = useState(stateStats);
+  const [chosenClass, setChosenClass] = useState(stateClass);
+  const [buildName, setBuildName] = useState("");
+  const [spanEmptyStatus, setEmptyStatus] = useState(false);
+  const [spanNameStatus, setNameStatus] = useState(false);
+  const [chosenEquipment, setChosenEquipment] = useState(stateEquip);
 
   const calculateLevel = (stats) => {
     let level = parseInt(classes[chosenClass].level);
@@ -98,7 +107,6 @@ function Planner() {
       class: chosenClass,
       equip: chosenEquipment
     }
-    console.log(toSave);
     if (buildName === "") {
       setEmptyStatus(true);
       setNameStatus(false);
@@ -111,9 +119,26 @@ function Planner() {
     }
     setNameStatus(false);
     setEmptyStatus(false);
-    console.log(spanNameStatus);
-    console.log(spanEmptyStatus);
     localStorage.setItem(buildName, JSON.stringify(toSave));
+  }
+
+  const reset = () => {
+    setChosenClass("wretch");
+    setPlayerStats(classes.wretch);
+    setChosenEquipment({
+      armor: {
+        head: 'None',
+        chest: 'None',
+        hands: 'None',
+        legs: 'None'
+      },
+      talismans: {
+        talisman1: "None",
+        talisman2: "None",
+        talisman3: "None",
+        talisman4: "None"
+      }
+    })
   }
 
   const classNames = Object.keys(classes);
@@ -141,6 +166,7 @@ function Planner() {
           <span className={spanNameStatus ? "block text-red-600" : "hidden"}>Name already exists</span>
           <span className={spanEmptyStatus ? "block text-red-600" : "hidden"}>Name cannot be empty </span>
           <button onClick={saveToLocalStorage}>Save to localStorage</button>
+          <button onClick={reset}>Reset</button>
         </div>
       </div>
     </div>
