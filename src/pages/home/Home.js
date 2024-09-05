@@ -2,10 +2,10 @@ import '../app/App.css'
 
 function Home() {
   return (
-    <div className="p-2 m-2 dark:bg-zinc-900 dark:text-white border-2 border-black dark:border-white">
+    <div className="">
       <p>Welcome Champions</p>
       <h1>Work In Progress</h1>
-      <p>to do: localstorage, saving to file, loading from file, responsibility, QoL (None at the top)</p>
+      <p>to do: saving to file, loading from file, responsibility, QoL (None at the top)</p>
       <p>future me, please be better at colors!</p>
       <p>localstorage saves and reads, but not everything. Now I need to: </p>
       <p>Save current state to sessionStorage (and load from there)</p>

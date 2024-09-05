@@ -2,6 +2,7 @@ import '../app/App.css'
 import './NavigationBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
+import { faXTwitter, faGithub, faReddit } from '@fortawesome/free-brands-svg-icons'
 
 import {
   Outlet,
@@ -35,23 +36,33 @@ function ButtonDarkMode() {
 //jakos lepiej ten button zrobic
 function NavigationBar() {
   return (
-    <div className='flex flex-col h-full border-2 border-red-900'>
-      <nav className="flex flex-row justify-center mt-2 mx-2 mb-1 p-2 border-2 
+    <div className='flex flex-col min-h-screen'>
+      <header>
+        <nav className="flex flex-row justify-center mt-2 mx-2 mb-1 p-2 border-2 
         bg-white border-black
         dark:bg-zinc-900 dark:border-white">
-        <ul className='flex flex-row relative space-x-16 text-lg'>
-          <li
-          ><Link to="/">Home</Link></li>
-          <li
-          ><Link to="/builds">Builds</Link></li>
-          <li
-          ><Link to="/planner" >Planner</Link></li>
-        </ul>
-        <ButtonDarkMode />
-      </nav>
-      <div className='flex-grow'>
+          <ul className='flex flex-row relative space-x-16 text-lg'>
+            <li
+            ><Link to="/">Home</Link></li>
+            <li
+            ><Link to="/builds">Builds</Link></li>
+            <li
+            ><Link to="/planner" >Planner</Link></li>
+          </ul>
+          <ButtonDarkMode />
+        </nav>
+      </header>
+      <main className='flex-grow border-2 border-black dark:border-white p-2 m-2 dark:text-white'>
         <Outlet />
-      </div>
+      </main>
+      <footer className='flex flex-row justify-between border-2 border-black dark:border-white p-2 mt-1 mx-2 mb-2 dark:text-white'>
+        <p className=''>&copy; Kacper "DScraftPL" Wiącek</p>
+        <div className=''>
+          <a href="https://www.reddit.com"> <FontAwesomeIcon icon={faReddit} /></a>
+          <a href="https://www.twitter.com" > <FontAwesomeIcon icon={faXTwitter} /></a>
+          <a href="https://github.com"> <FontAwesomeIcon icon={faGithub} /> </a>
+        </div>
+      </footer>
     </div>
   )
 }

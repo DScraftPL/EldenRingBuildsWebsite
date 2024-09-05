@@ -41,7 +41,7 @@ function Builds() {
   }
 
   return (
-    <div className="flex flex-wrap flex-row justify-center p-2 m-2 dark:bg-zinc-900 border-2 border-black dark:text-white dark:border-white">
+    <div className="flex flex-wrap flex-row justify-center">
       {
         savedData.map((dataEntry, index) => (
           <div key={index} className="border-2 border-black dark:border-white p-2 m-2">
