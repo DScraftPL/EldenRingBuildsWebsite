@@ -56,8 +56,8 @@ function NavigationBar() {
         <Outlet />
       </main>
       <footer className='flex flex-row justify-between border-2 border-black dark:border-white p-2 mt-1 mx-2 mb-2 dark:text-white'>
-        <p className=''>&copy; Kacper "DScraftPL" Wiącek</p>
-        <div className=''>
+        <p className='mx-2'>&copy; Kacper "DScraftPL" Wiącek</p>
+        <div className='mx-2 space-x-2'>
           <a href="https://www.reddit.com"> <FontAwesomeIcon icon={faReddit} /></a>
           <a href="https://www.twitter.com" > <FontAwesomeIcon icon={faXTwitter} /></a>
           <a href="https://github.com"> <FontAwesomeIcon icon={faGithub} /> </a>
