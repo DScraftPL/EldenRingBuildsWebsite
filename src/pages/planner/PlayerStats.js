@@ -1,3 +1,5 @@
+import './PlayerStats.css'
+
 function PlayerStat({ id, stat, onChange, classStat }) {
 
   const handleChange = (e) => {
@@ -15,10 +17,10 @@ function PlayerStat({ id, stat, onChange, classStat }) {
         onChange={handleChange}
       />
       <button
-        className="w-4"
+        className="buttonSingle"
         onClick={() => { onChange(id, stat - 1); }}>-</button>
       <button
-        className="w-4"
+        className="buttonSingle"
         onClick={() => { onChange(id, stat + 1); }}>+</button>
     </div>
   )
@@ -28,7 +30,7 @@ function PlayerStat({ id, stat, onChange, classStat }) {
 function PlayerStats({ playerStats, onChange, classStat }) {
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h1>level: {playerStats.level}</h1>
       <PlayerStat id='vigor' stat={playerStats.vigor} onChange={onChange} classStat={classStat.vigor} />
       <PlayerStat id='mind' stat={playerStats.mind} onChange={onChange} classStat={classStat.mind} />

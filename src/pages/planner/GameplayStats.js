@@ -19,6 +19,8 @@ import {
   updatePoise
 } from "./updateStats";
 
+import './GameplayStats.css'
+
 function GameplayStat({ id, update }) {
   return (<div className="flex flex-row">
     <label
@@ -40,7 +42,7 @@ function RollStat({ id, update }) {
   return (<div className="flex flex-row">
     <label
       htmlFor={id}
-      className="w-32"
+      className="w-20"
     >{id} </label>
     <input
       id={id}
@@ -55,8 +57,8 @@ function RollStat({ id, update }) {
 function GameplayStats({ playerStats, chosenEquipment }) {
 
   return (
-    <div className="flex">
-      <div id="primaryStats" className="border-black border-2 m-2 p-2 dark:text-white dark:bg-zinc-900 dark:border-white" >
+    <div className="flex flex-wrap flex-col lg:flex-row" >
+      <div id="primaryStats" className="defaultDivGs" >
         <GameplayStat id="HP" update={updateHP(playerStats.vigor, chosenEquipment)} />
         <GameplayStat id="FP" update={updateFP(playerStats.mind, chosenEquipment)} />
         <GameplayStat id="Stamina" update={updateStamina(playerStats.endurance, chosenEquipment)} />
@@ -65,14 +67,14 @@ function GameplayStats({ playerStats, chosenEquipment }) {
         <RollStat id="Roll Type" update={updateRollType(playerStats.endurance, chosenEquipment)} />
         <GameplayStat id="Poise" update={updatePoise(chosenEquipment)} />
       </div>
-      <div id="secondaryStats" className="border-black border-2 m-2 p-2 dark:text-white dark:bg-zinc-900 dark:border-white">
+      <div id="secondaryStats" className="defaultDivGs">
         <GameplayStat id="Immunity" update={updateImmunity(playerStats.vigor, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Focus" update={updateFocus(playerStats.mind, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Robustness" update={updateRobustness(playerStats.endurance, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Vitality" update={updateVitality(playerStats.arcane, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Discovery" update={updateDiscovery(playerStats.arcane, chosenEquipment)} />
       </div>
-      <div id="defensiveStats" className="border-black border-2 m-2 p-2 dark:text-white dark:bg-zinc-900 dark:border-white">
+      <div id="defensiveStats" className="defaultDivGs">
         <GameplayStat id="Physical Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Strike Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
         <GameplayStat id="Slash Def" update={updatePhysicalDef(playerStats.strength, playerStats.level, chosenEquipment)} />
@@ -82,7 +84,7 @@ function GameplayStats({ playerStats, chosenEquipment }) {
         <GameplayStat id="Lightning Def" update={updateLightningDef(playerStats.level, chosenEquipment)} />
         <GameplayStat id="Holy Def" update={updateHolyDef(playerStats.arcane, playerStats.level, chosenEquipment)} />
       </div>
-      <div id="negationStats" className="border-black border-2 m-2 p-2 dark:text-white dark:bg-zinc-900 dark:border-white">
+      <div id="negationStats" className="defaultDivGs">
         <GameplayStat id="Physical Neg" update={updateNegation('PhysRed', chosenEquipment, '')} />
         <GameplayStat id="Strike Neg" update={updateNegation('PhysRed', chosenEquipment, 'StrikeRed')} />
         <GameplayStat id="Slash Neg" update={updateNegation('PhysRed', chosenEquipment, 'SlashRed')} />

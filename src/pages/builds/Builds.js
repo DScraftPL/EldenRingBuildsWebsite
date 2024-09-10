@@ -18,17 +18,19 @@ function Builds() {
     const navigate = useNavigate();
 
     return (
-      <button onClick={() => {
-        navigate('/planner', {
-          state:
-          {
-            class: dataEntry.class,
-            equip: dataEntry.equip,
-            stats: dataEntry.stats
-          }
-        })
-      }
-      }>Modify</button>
+      <button
+        className="block"
+        onClick={() => {
+          navigate('/planner', {
+            state:
+            {
+              class: dataEntry.class,
+              equip: dataEntry.equip,
+              stats: dataEntry.stats
+            }
+          })
+        }
+        }>Modify</button>
     )
   }
 
@@ -37,37 +39,43 @@ function Builds() {
       localStorage.removeItem(dataEntry.name);
       setSavedData(savedData.filter(item => item !== dataEntry))
     }
-    return (<button onClick={deleteThis}>Delete</button>)
+    return (<button className="block" onClick={deleteThis}>Delete</button>)
+  }
+
+  if (savedData.length === 0) {
+    return (
+      <h1>No saved data in localStorage! Go to planner tab and create a build there!</h1>
+    )
   }
 
   return (
     <div className="flex flex-wrap flex-row justify-center">
       {
         savedData.map((dataEntry, index) => (
-          <div key={index} className="border-2 border-black dark:border-white p-2 m-2">
+          <div key={index} className="border-2 border-black dark:border-white p-2 m-2 space-y-2">
+            <h2>{dataEntry.name}</h2>
+            <p>class: {dataEntry.class}</p>
             <div>
               {
                 Object.entries(dataEntry.stats).map(([stat, statValue], index) => (
-                  <p key={index}>{stat} {statValue}</p>
+                  <p key={index}>{stat}: {statValue}</p>
                 ))
               }
             </div>
             <div>
               {
                 Object.entries(dataEntry.equip.armor).map(([stat, statValue], index) => (
-                  <p key={index}>{stat} {statValue}</p>
+                  <p key={index}>{stat}: {statValue}</p>
                 ))
               }
             </div>
             <div>
               {
                 Object.entries(dataEntry.equip.talismans).map(([stat, statValue], index) => (
-                  <p key={index}>{stat} {statValue}</p>
+                  <p key={index}>{stat}: {statValue}</p>
                 ))
               }
             </div>
-            <p>class {dataEntry.class}</p>
-            <p>name {dataEntry.name}</p>
             <ModifyButton dataEntry={dataEntry} />
             <DeleteButton dataEntry={dataEntry} />
           </div>

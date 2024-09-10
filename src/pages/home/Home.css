@@ -1,0 +1,15 @@
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg ml-2;
+}
+
+h4 {
+  @apply text-sm ml-4 my-1;
+}

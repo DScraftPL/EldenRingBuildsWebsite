@@ -27,7 +27,7 @@ function ButtonDarkMode() {
   }
 
   return (<button
-    className="text-yellow-500 text-xl absolute right-4 m-2"
+    className="text-yellow-500 text-xl absolute right-2 m-2"
     onClick={toggleTheme}
   ><FontAwesomeIcon icon={theme === "light" ? faSun : faMoon} /></button>)
 }

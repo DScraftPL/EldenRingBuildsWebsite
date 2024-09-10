@@ -1,0 +1,3 @@
+.defaultDivGs {
+  @apply flex flex-col items-center border-black border-2 m-2 p-2 dark:bg-zinc-900 dark:border-white;
+}

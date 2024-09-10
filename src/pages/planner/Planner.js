@@ -145,8 +145,8 @@ function Planner() {
 
   return (
     <div className=''>
-      <div className="flex flex-wrap justify-center">
-        <div className="border-2 border-black m-2 p-2 dark:border-white dark:bg-zinc-900 dark:text-white">
+      <div className="flex flex-col flex-wrap justify-center lg:flex-row">
+        <div className="flex flex-col items-center border-2 border-black m-2 p-2 dark:border-white dark:bg-zinc-900 dark:text-white">
           <PlayerStats playerStats={playerStats} onChange={updatePlayerStats} classStat={classes[chosenClass]} />
           <label htmlFor='selectClass'> Choose class: </label>
           <select id="selectClass" value={chosenClass} onChange={updateChosenClass}>

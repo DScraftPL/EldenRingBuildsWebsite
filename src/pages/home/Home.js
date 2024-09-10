@@ -1,4 +1,5 @@
 import '../app/App.css'
+import './Home.css'
 
 function Home() {
   return (
@@ -6,16 +7,20 @@ function Home() {
       <h1>Welcome Champions</h1>
       <h2>Work In Progress</h2>
       <h2>To Do:</h2>
+      <h3>modify put name into input on planner, add option to overwrite (on alert)</h3>
       <h3>save to File, load to File</h3>
       <h3>save state to sessionStorage if browser ends, user can continue</h3>
       <h3>better colors</h3>
-      <h3>responsibility</h3>
+      <h4>better accent color, bluer blue</h4>
+      <h3>responsibility (it can be done better)</h3>
       <h4>bigger screens, it looks to small</h4>
       <h4>smaller screens, it looks weird </h4>
       <h3>QoL</h3>
+      <h4>buttons distinquish themselves</h4>
       <h4>None at the top of the lists</h4>
-      <h3>Fromat builds</h3>
+      <h3>Format builds</h3>
       <h2>Done:</h2>
+      <h3>Responsibility</h3>
       <h3>Planner</h3>
       <h4>Primary Stats</h4>
       <h4>Talismans</h4>
